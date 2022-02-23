@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81E6C98FACDC0C4266CB27D9 /* Pods_ScopeIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC0CB2D39F06633C2299D50 /* Pods_ScopeIt.framework */; };
 		BC3909B727C51BE100D8C0CC /* ScopeItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3909B627C51BE100D8C0CC /* ScopeItApp.swift */; };
 		BC3909B927C51BE100D8C0CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3909B827C51BE100D8C0CC /* ContentView.swift */; };
 		BC3909BB27C51BE300D8C0CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC3909BA27C51BE300D8C0CC /* Assets.xcassets */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5DC0CB2D39F06633C2299D50 /* Pods_ScopeIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScopeIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97FE92465CA00F913CE4729B /* Pods-ScopeIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScopeIt.release.xcconfig"; path = "Target Support Files/Pods-ScopeIt/Pods-ScopeIt.release.xcconfig"; sourceTree = "<group>"; };
 		BC3909B327C51BE100D8C0CC /* ScopeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScopeIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC3909B627C51BE100D8C0CC /* ScopeItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeItApp.swift; sourceTree = "<group>"; };
 		BC3909B827C51BE100D8C0CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		BC3909CF27C51BE400D8C0CC /* ScopeItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScopeItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC3909D327C51BE400D8C0CC /* ScopeItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeItUITests.swift; sourceTree = "<group>"; };
 		BC3909D527C51BE400D8C0CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0F17084B173D6FF1F0837B6 /* Pods-ScopeIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScopeIt.debug.xcconfig"; path = "Target Support Files/Pods-ScopeIt/Pods-ScopeIt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E6C98FACDC0C4266CB27D9 /* Pods_ScopeIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E61C944C6766CEE93830D18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DC0CB2D39F06633C2299D50 /* Pods_ScopeIt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BC3909AA27C51BE000D8C0CC = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +92,8 @@
 				BC3909C727C51BE400D8C0CC /* ScopeItTests */,
 				BC3909D227C51BE400D8C0CC /* ScopeItUITests */,
 				BC3909B427C51BE100D8C0CC /* Products */,
+				F88BBCBBC972E5798E74DAE6 /* Pods */,
+				3E61C944C6766CEE93830D18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +145,16 @@
 			path = ScopeItUITests;
 			sourceTree = "<group>";
 		};
+		F88BBCBBC972E5798E74DAE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0F17084B173D6FF1F0837B6 /* Pods-ScopeIt.debug.xcconfig */,
+				97FE92465CA00F913CE4729B /* Pods-ScopeIt.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC3909D827C51BE400D8C0CC /* Build configuration list for PBXNativeTarget "ScopeIt" */;
 			buildPhases = (
+				C72C879FA784F81D6FC85F98 /* [CP] Check Pods Manifest.lock */,
 				BC3909AF27C51BE100D8C0CC /* Sources */,
 				BC3909B027C51BE100D8C0CC /* Frameworks */,
 				BC3909B127C51BE100D8C0CC /* Resources */,
+				C5090295E4927CC90321F26F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +280,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C5090295E4927CC90321F26F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScopeIt/Pods-ScopeIt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScopeIt/Pods-ScopeIt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScopeIt/Pods-ScopeIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C72C879FA784F81D6FC85F98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScopeIt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BC3909AF27C51BE100D8C0CC /* Sources */ = {
@@ -414,6 +483,7 @@
 		};
 		BC3909D927C51BE400D8C0CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0F17084B173D6FF1F0837B6 /* Pods-ScopeIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -435,6 +505,7 @@
 		};
 		BC3909DA27C51BE400D8C0CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97FE92465CA00F913CE4729B /* Pods-ScopeIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
