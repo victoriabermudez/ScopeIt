@@ -88,7 +88,6 @@
 		2DB7990E27C7D1CD008517E8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BC3909B627C51BE100D8C0CC /* ScopeItApp.swift */,
 				2DB7990A27C7D15A008517E8 /* UserInfo.swift */,
 				2DB7990827C7D120008517E8 /* FirebaseFunctions.swift */,
 			);
@@ -137,6 +136,7 @@
 		BC3909B527C51BE100D8C0CC /* ScopeIt */ = {
 			isa = PBXGroup;
 			children = (
+				BC3909B627C51BE100D8C0CC /* ScopeItApp.swift */,
 				BC3909BF27C51BE300D8C0CC /* Info.plist */,
 				2DD13BB327C67B6D00E8C6D3 /* GoogleService-Info (1).plist */,
 				BC3909BA27C51BE300D8C0CC /* Assets.xcassets */,
