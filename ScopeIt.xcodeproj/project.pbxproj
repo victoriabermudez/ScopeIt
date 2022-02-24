@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DB7990927C7D120008517E8 /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7990827C7D120008517E8 /* FirebaseFunctions.swift */; };
+		2DB7990B27C7D15A008517E8 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7990A27C7D15A008517E8 /* UserInfo.swift */; };
+		2DB7990D27C7D1B4008517E8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7990C27C7D1B4008517E8 /* LoginView.swift */; };
+		2DD13BB427C67B6D00E8C6D3 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DD13BB327C67B6D00E8C6D3 /* GoogleService-Info (1).plist */; };
 		81E6C98FACDC0C4266CB27D9 /* Pods_ScopeIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC0CB2D39F06633C2299D50 /* Pods_ScopeIt.framework */; };
 		BC3909B727C51BE100D8C0CC /* ScopeItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3909B627C51BE100D8C0CC /* ScopeItApp.swift */; };
 		BC3909B927C51BE100D8C0CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3909B827C51BE100D8C0CC /* ContentView.swift */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2DB7990827C7D120008517E8 /* FirebaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFunctions.swift; sourceTree = "<group>"; };
+		2DB7990A27C7D15A008517E8 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		2DB7990C27C7D1B4008517E8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2DD13BB327C67B6D00E8C6D3 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 		5DC0CB2D39F06633C2299D50 /* Pods_ScopeIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScopeIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FE92465CA00F913CE4729B /* Pods-ScopeIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScopeIt.release.xcconfig"; path = "Target Support Files/Pods-ScopeIt/Pods-ScopeIt.release.xcconfig"; sourceTree = "<group>"; };
 		BC3909B327C51BE100D8C0CC /* ScopeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScopeIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +85,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DB7990E27C7D1CD008517E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC3909B627C51BE100D8C0CC /* ScopeItApp.swift */,
+				2DB7990A27C7D15A008517E8 /* UserInfo.swift */,
+				2DB7990827C7D120008517E8 /* FirebaseFunctions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DB7990F27C7D1D1008517E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC3909B827C51BE100D8C0CC /* ContentView.swift */,
+				2DB7990C27C7D1B4008517E8 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3E61C944C6766CEE93830D18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,10 +137,11 @@
 		BC3909B527C51BE100D8C0CC /* ScopeIt */ = {
 			isa = PBXGroup;
 			children = (
-				BC3909B627C51BE100D8C0CC /* ScopeItApp.swift */,
-				BC3909B827C51BE100D8C0CC /* ContentView.swift */,
-				BC3909BA27C51BE300D8C0CC /* Assets.xcassets */,
 				BC3909BF27C51BE300D8C0CC /* Info.plist */,
+				2DD13BB327C67B6D00E8C6D3 /* GoogleService-Info (1).plist */,
+				BC3909BA27C51BE300D8C0CC /* Assets.xcassets */,
+				2DB7990F27C7D1D1008517E8 /* Views */,
+				2DB7990E27C7D1CD008517E8 /* Model */,
 				BC3909BC27C51BE300D8C0CC /* Preview Content */,
 			);
 			path = ScopeIt;
@@ -151,7 +179,6 @@
 				F0F17084B173D6FF1F0837B6 /* Pods-ScopeIt.debug.xcconfig */,
 				97FE92465CA00F913CE4729B /* Pods-ScopeIt.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -261,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC3909BE27C51BE300D8C0CC /* Preview Assets.xcassets in Resources */,
+				2DD13BB427C67B6D00E8C6D3 /* GoogleService-Info (1).plist in Resources */,
 				BC3909BB27C51BE300D8C0CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,8 +356,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB7990B27C7D15A008517E8 /* UserInfo.swift in Sources */,
 				BC3909B927C51BE100D8C0CC /* ContentView.swift in Sources */,
 				BC3909B727C51BE100D8C0CC /* ScopeItApp.swift in Sources */,
+				2DB7990D27C7D1B4008517E8 /* LoginView.swift in Sources */,
+				2DB7990927C7D120008517E8 /* FirebaseFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
