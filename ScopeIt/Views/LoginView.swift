@@ -15,6 +15,7 @@ struct LoginView: View {
     var body: some View {
         ZStack{
             Rectangle()
+                .foregroundColor(.white)
                 .edgesIgnoringSafeArea(.all)
             VStack{
                 
@@ -25,6 +26,7 @@ struct LoginView: View {
                 .padding()
                 
                 Button("Forgot Password"){
+                    showSheet = true
 //                    FirebaseFunctions.forgotPassword(email: userInfo.email){ success in
 //                        //come back and add alert if invalid email is entered
 //
@@ -32,7 +34,18 @@ struct LoginView: View {
 //                        
 //                    }
                 }.sheet(isPresented: $showSheet, onDismiss: { FirebaseFunctions.forgotPassword(email: userInfo.email){result in}}, content:{
-                    
+                    VStack{
+                        Text("Forgot Password")
+                        HStack{
+                            Image(systemName: "mail")
+                            TextField("email address", text: $userInfo.email).disableAutocorrection(true).autocapitalization(.none).keyboardType(.emailAddress)
+                        }
+                        Spacer()
+                        Button("Send recovery email"){
+                            FirebaseFunctions.forgotPassword(email: userInfo.email){ success in
+                            }
+                        }
+                    }
                 }).padding()
                 
                 HStack {
