@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     
     @EnvironmentObject var userInfo : UserInfo
+    @State private var showSheet = false
     
     var body: some View {
         ZStack{
@@ -24,10 +25,15 @@ struct LoginView: View {
                 .padding()
                 
                 Button("Forgot Password"){
-                    FirebaseFunctions.forgotPassword(email: userInfo.email){ success in
-                        //come back and add alert if invalid email is entered
-                    }
-                }.padding()
+//                    FirebaseFunctions.forgotPassword(email: userInfo.email){ success in
+//                        //come back and add alert if invalid email is entered
+//
+//
+//                        
+//                    }
+                }.sheet(isPresented: $showSheet, onDismiss: { FirebaseFunctions.forgotPassword(email: userInfo.email){result in}}, content:{
+                    
+                }).padding()
                 
                 HStack {
                     Image(systemName: "lock")
