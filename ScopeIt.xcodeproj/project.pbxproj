@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D6A7C2527CE5CCD00782D02 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A7C2427CE5CCD00782D02 /* Constants.swift */; };
+		2D6A7C2727CE616900782D02 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A7C2627CE616900782D02 /* CreateAccountView.swift */; };
 		2DB7990927C7D120008517E8 /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7990827C7D120008517E8 /* FirebaseFunctions.swift */; };
 		2DB7990B27C7D15A008517E8 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7990A27C7D15A008517E8 /* UserInfo.swift */; };
 		2DB7990D27C7D1B4008517E8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7990C27C7D1B4008517E8 /* LoginView.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		2D6A7C2427CE5CCD00782D02 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2D6A7C2627CE616900782D02 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		2DB7990827C7D120008517E8 /* FirebaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFunctions.swift; sourceTree = "<group>"; };
 		2DB7990A27C7D15A008517E8 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		2DB7990C27C7D1B4008517E8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				BC3909B827C51BE100D8C0CC /* ContentView.swift */,
 				2DB7990C27C7D1B4008517E8 /* LoginView.swift */,
+				2D6A7C2627CE616900782D02 /* CreateAccountView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				2DB7990B27C7D15A008517E8 /* UserInfo.swift in Sources */,
 				BC3909B927C51BE100D8C0CC /* ContentView.swift in Sources */,
 				BC3909B727C51BE100D8C0CC /* ScopeItApp.swift in Sources */,
+				2D6A7C2727CE616900782D02 /* CreateAccountView.swift in Sources */,
 				2DB7990D27C7D1B4008517E8 /* LoginView.swift in Sources */,
 				2DB7990927C7D120008517E8 /* FirebaseFunctions.swift in Sources */,
 				2D6A7C2527CE5CCD00782D02 /* Constants.swift in Sources */,

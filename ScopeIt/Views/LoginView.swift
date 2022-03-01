@@ -47,24 +47,19 @@ struct LoginView: View {
                     }
                     .edgesIgnoringSafeArea(.all)
                 }).padding()
+                .background(Color.black)
+                .foregroundColor(.white)
+                .cornerRadius(10)
                 
                 HStack {
                     Image(systemName: "lock")
                     SecureField("password", text: $userInfo.password)
                 }
                 .padding()
-                
-                
-                Button("Create Account With Email") {
-                    FirebaseFunctions.authenticate(email: userInfo.email, password: userInfo.password) { success in
-                        if success{
-                            userInfo.loggedin = true
-                        }
-                    }
-                }.frame(width: UIScreen.main.bounds.width - 100)
-                .padding()
-                .cornerRadius(30)
                 .padding(.top, 50)
+                
+                
+                
                 
                 Button("Log In"){
                     FirebaseFunctions.login(email: userInfo.email, password: userInfo.password) { success in
@@ -72,10 +67,29 @@ struct LoginView: View {
                             userInfo.loggedin = true
                         }
                     }
-                }.frame(width: UIScreen.main.bounds.width - 100)
+                }.padding()
+                .frame(width: UIScreen.main.bounds.width - 100)
+                .background(Color.black)
+                .foregroundColor(.white)
+                .cornerRadius(10)
                 .padding()
                 .cornerRadius(30)
                 .padding()
+                
+                
+                Button("Create An Account") {
+                    FirebaseFunctions.authenticate(email: userInfo.email, password: userInfo.password) { success in
+                        if success{
+                            userInfo.loggedin = true
+                        }
+                    }
+                }.padding()
+                .frame(width: UIScreen.main.bounds.width - 100)
+                .background(Color.white)
+                .foregroundColor(.black)
+                .cornerRadius(10)
+                .padding()
+                .cornerRadius(30)
             }
         }
     }
