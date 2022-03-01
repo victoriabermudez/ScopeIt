@@ -44,6 +44,7 @@ struct LoginView: View {
                         Button("Send recovery email"){
                             FirebaseFunctions.forgotPassword(email: userInfo.email){ success in
                             }
+                            
                         }
                     }
                 }).padding()
