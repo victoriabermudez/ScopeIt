@@ -78,11 +78,7 @@ struct LoginView: View {
                 
                 
                 Button("Create An Account") {
-                    FirebaseFunctions.authenticate(email: userInfo.email, password: userInfo.password) { success in
-                        if success{
-                            userInfo.loggedin = true
-                        }
-                    }
+                    CreateAccountView()
                 }.padding()
                 .frame(width: UIScreen.main.bounds.width - 100)
                 .background(Color.white)
