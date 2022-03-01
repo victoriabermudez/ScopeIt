@@ -15,7 +15,7 @@ struct LoginView: View {
     var body: some View {
         ZStack{
             Rectangle()
-                .foregroundColor(.white)
+                .foregroundColor(Color.lilac)
                 .edgesIgnoringSafeArea(.all)
             VStack{
                 
@@ -27,15 +27,11 @@ struct LoginView: View {
                 
                 Button("Forgot Password"){
                     showSheet = true
-//                    FirebaseFunctions.forgotPassword(email: userInfo.email){ success in
-//                        //come back and add alert if invalid email is entered
-//
-//
-//                        
-//                    }
                 }.sheet(isPresented: $showSheet, onDismiss: { FirebaseFunctions.forgotPassword(email: userInfo.email){result in}}, content:{
                     VStack{
+                        Spacer()
                         Text("Forgot Password")
+                        Spacer()
                         HStack{
                             Image(systemName: "mail")
                             TextField("email address", text: $userInfo.email).disableAutocorrection(true).autocapitalization(.none).keyboardType(.emailAddress)
@@ -44,9 +40,12 @@ struct LoginView: View {
                         Button("Send recovery email"){
                             FirebaseFunctions.forgotPassword(email: userInfo.email){ success in
                             }
-                            
+                            //come back and add alert if invalid email is entered
+                            showSheet = false
                         }
+                        Spacer()
                     }
+                    .edgesIgnoringSafeArea(.all)
                 }).padding()
                 
                 HStack {
