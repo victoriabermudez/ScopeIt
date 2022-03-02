@@ -12,7 +12,15 @@ struct ContentView: View {
     @EnvironmentObject var userInfo: UserInfo
     
     var body: some View {
-       LoginView()
+        Group{
+            if userInfo.createAcct{
+                CreateAccountView()
+            } else if userInfo.loggedin == false {
+                LoginView()
+            } else {
+                HomeView()
+            }
+        }
     }
 }
 

@@ -13,6 +13,7 @@
 		2DB7990B27C7D15A008517E8 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7990A27C7D15A008517E8 /* UserInfo.swift */; };
 		2DB7990D27C7D1B4008517E8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7990C27C7D1B4008517E8 /* LoginView.swift */; };
 		2DD13BB427C67B6D00E8C6D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DD13BB327C67B6D00E8C6D3 /* GoogleService-Info.plist */; };
+		2DE673D627CFBBA30064E60E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE673D527CFBBA30064E60E /* HomeView.swift */; };
 		81E6C98FACDC0C4266CB27D9 /* Pods_ScopeIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC0CB2D39F06633C2299D50 /* Pods_ScopeIt.framework */; };
 		BC3909B727C51BE100D8C0CC /* ScopeItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3909B627C51BE100D8C0CC /* ScopeItApp.swift */; };
 		BC3909B927C51BE100D8C0CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3909B827C51BE100D8C0CC /* ContentView.swift */; };
@@ -46,6 +47,7 @@
 		2DB7990A27C7D15A008517E8 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		2DB7990C27C7D1B4008517E8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2DD13BB327C67B6D00E8C6D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2DE673D527CFBBA30064E60E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5DC0CB2D39F06633C2299D50 /* Pods_ScopeIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScopeIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FE92465CA00F913CE4729B /* Pods-ScopeIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScopeIt.release.xcconfig"; path = "Target Support Files/Pods-ScopeIt/Pods-ScopeIt.release.xcconfig"; sourceTree = "<group>"; };
 		BC3909B327C51BE100D8C0CC /* ScopeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScopeIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,7 @@
 				BC3909B827C51BE100D8C0CC /* ContentView.swift */,
 				2DB7990C27C7D1B4008517E8 /* LoginView.swift */,
 				2D6A7C2627CE616900782D02 /* CreateAccountView.swift */,
+				2DE673D527CFBBA30064E60E /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				BC3909B727C51BE100D8C0CC /* ScopeItApp.swift in Sources */,
 				2D6A7C2727CE616900782D02 /* CreateAccountView.swift in Sources */,
 				2DB7990D27C7D1B4008517E8 /* LoginView.swift in Sources */,
+				2DE673D627CFBBA30064E60E /* HomeView.swift in Sources */,
 				2DB7990927C7D120008517E8 /* FirebaseFunctions.swift in Sources */,
 				2D6A7C2527CE5CCD00782D02 /* Constants.swift in Sources */,
 			);

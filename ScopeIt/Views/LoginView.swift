@@ -78,7 +78,7 @@ struct LoginView: View {
                 
                 
                 Button("Create An Account") {
-                    CreateAccountView()
+                    userInfo.createAcct = true
                 }.padding()
                 .frame(width: UIScreen.main.bounds.width - 100)
                 .background(Color.white)
