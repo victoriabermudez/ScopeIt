@@ -25,7 +25,9 @@ struct FirebaseFunctions{
                 //if user does not exist, just exit
                 userInfo.email = user.email ?? ""
                 //optional unwrapping ^^
-                userInfo.loggedin = true
+               
+                //COME BACK TO THIS
+                //userInfo.loggedin = true
                 
                 let uid = user.uid
                 
