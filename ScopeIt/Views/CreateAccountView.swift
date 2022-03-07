@@ -22,7 +22,9 @@ struct CreateAccountView: View {
                 HStack {
                     Image(systemName: "mail")
                     TextField("email address", text: $userInfo.email).disableAutocorrection(true).autocapitalization(.none).keyboardType(.emailAddress)
-                }.padding(.bottom, 50)
+                }.padding()
+                    .padding(.top, 100)
+                .padding(.bottom, 10)
                 
                 
                 HStack {
@@ -30,7 +32,7 @@ struct CreateAccountView: View {
                     SecureField("password", text: $userInfo.password)
                 }
                 .padding()
-                .padding(.top, 50)
+                .padding(.top, 10)
                 Spacer()
                 
                 
@@ -42,6 +44,7 @@ struct CreateAccountView: View {
                         }
                     }
                 }.padding()
+                .frame(width: UIScreen.main.bounds.width - 100)
                 .background(Color.black)
                 .foregroundColor(.white)
                 .cornerRadius(10)
@@ -55,10 +58,11 @@ struct CreateAccountView: View {
                         
                     
                 }.padding()
+                .frame(width: UIScreen.main.bounds.width - 100)
                 .background(Color.black)
                 .foregroundColor(.white)
                 .cornerRadius(10)
-                .padding(.top, 50)
+                .padding(.top, 20)
                 
                 Spacer()
                 
