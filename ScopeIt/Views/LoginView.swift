@@ -10,7 +10,8 @@ import SwiftUI
 struct LoginView: View {
     
     @EnvironmentObject var userInfo : UserInfo
-    @State private var showSheet = false
+    @State private var showForgotPasswordSheet = false
+    @State private var showIncorrectPasswordAlert = false
     
     var body: some View {
         ZStack{
@@ -26,8 +27,8 @@ struct LoginView: View {
                 .padding()
                 
                 Button("Forgot Password"){
-                    showSheet = true
-                }.sheet(isPresented: $showSheet, onDismiss: { FirebaseFunctions.forgotPassword(email: userInfo.email){result in}}, content:{
+                    showForgotPasswordSheet = true
+                }.sheet(isPresented: $showForgotPasswordSheet, onDismiss: { FirebaseFunctions.forgotPassword(email: userInfo.email){result in}}, content:{
                     ZStack{
                         Rectangle()
                             .foregroundColor(Color.lilac)
@@ -53,7 +54,7 @@ struct LoginView: View {
                                 FirebaseFunctions.forgotPassword(email: userInfo.email){ success in
                                 }
                                 //come back and add alert if invalid email is entered
-                                showSheet = false
+                                showForgotPasswordSheet = false
                             }
                             .padding()
                             .frame(width: UIScreen.main.bounds.width - 100)
@@ -67,8 +68,8 @@ struct LoginView: View {
                         .edgesIgnoringSafeArea(.all)
                     }
                 }).padding()
-                    .background(Color.black)
-                    .foregroundColor(.white)
+                    .font(.system(size: 15))
+                    .foregroundColor(.red)
                     .cornerRadius(10)
                 
                 HStack {
@@ -76,7 +77,7 @@ struct LoginView: View {
                     SecureField("password", text: $userInfo.password)
                 }
                 .padding()
-                .padding(.top, 50)
+                .padding(.top, 20)
                 
                 
                 
@@ -87,11 +88,18 @@ struct LoginView: View {
                             userInfo.loggedin = true
                         }
                         else{
-                            Text("Incorrect password. Try again or click Forgot Password")
-                                .foregroundColor(.red)
+                            showIncorrectPasswordAlert = true
                         }
                     }
-                }.padding()
+                }.alert(isPresented: $showIncorrectPasswordAlert){
+                    Alert(
+                        title: Text("Incorrect Credentials"),
+                        message: Text("Try again or click Forgot Password"),
+                        dismissButton: .default(Text("Back to Login"))
+                        )
+                }
+                
+                .padding()
                     .frame(width: UIScreen.main.bounds.width - 100)
                     .background(Color.black)
                     .foregroundColor(.white)

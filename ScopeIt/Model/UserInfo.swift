@@ -8,9 +8,9 @@
 import SwiftUI
 
 class UserInfo: ObservableObject{
-    var email: String
+    @Published var email: String
     var name: String
-    var password: String
+    @Published var password: String
     @Published var image: UIImage = UIImage(named: "user")!
     @Published var loggedin: Bool = false
     @Published var createAcct: Bool = false

@@ -10,6 +10,7 @@ import SwiftUI
 struct CreateAccountView: View {
     
     @EnvironmentObject var userInfo : UserInfo
+    //@State var userInfo : UserInfo = UserInfo()
     
     var body: some View {
         ZStack{
@@ -45,12 +46,10 @@ struct CreateAccountView: View {
                     }
                 }.padding()
                 .frame(width: UIScreen.main.bounds.width - 100)
-                .background(Color.black)
-                .foregroundColor(.white)
+                .background(Color.white)
+                .foregroundColor(.black)
                 .cornerRadius(10)
                 .padding(.top, 50)
-                .padding(.bottom, 10)
-                
                 Button("Back to Login"){
                     
                             userInfo.loggedin = false
@@ -58,11 +57,10 @@ struct CreateAccountView: View {
                         
                     
                 }.padding()
-                .frame(width: UIScreen.main.bounds.width - 100)
-                .background(Color.black)
-                .foregroundColor(.white)
-                .cornerRadius(10)
-                .padding(.top, 20)
+                .font(.system(size: 15))
+                .frame(width: UIScreen.main.bounds.width - 200)
+                .foregroundColor(.black)
+                .padding(.top, 10)
                 
                 Spacer()
                 
