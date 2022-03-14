@@ -15,7 +15,9 @@ struct ContentView: View {
                 Group{
                     if userInfo.createAcct{
                         CreateAccountView()
-                    } else if userInfo.loggedin == false {
+                    } else if userInfo.accountInfo{
+                        AccountInfoView()
+                    } else if !userInfo.loggedin{
                         LoginView()
                     } else {
                         HomeView()

@@ -9,7 +9,30 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Rectangle()
+                .foregroundColor(Color.lilac)
+                .edgesIgnoringSafeArea(.all)
+            
+            TabView{
+                DailyView()
+                    .tabItem{
+                        Label("Daily", systemImage: "calendar.circle.fill")
+                    }
+                HoroscopeView()
+                    .tabItem{
+                        Label("Horoscope", systemImage: "moon.circle.fill")
+                    }
+                SettingsView()
+                    .tabItem{
+                        Label("Settings", systemImage: "gear.circle.fill")
+                    }
+                ProfileView()
+                    .tabItem{
+                        Label("Profile", systemImage: "person.circle.fill")
+                    }
+            }
+        }
     }
 }
 
