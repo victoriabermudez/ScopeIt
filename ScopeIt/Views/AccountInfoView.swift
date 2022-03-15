@@ -19,7 +19,20 @@ struct AccountInfoView: View {
     
     @State private var yearSelection = 1
     @State private var yearIsExpanded = false
-
+    
+    @State var months = [1: "January",
+                         2: "February",
+                         3: "March",
+                         4: "April",
+                         5: "May",
+                         6: "June",
+                         7: "July",
+                         8: "August",
+                         9: "September",
+                         10: "October",
+                         11: "November",
+                         12: "December"]
+    
     var body: some View {
         ZStack{
             Rectangle()
@@ -30,6 +43,7 @@ struct AccountInfoView: View {
                 
                 HStack {
                     Image(systemName: "person.circle.fill")
+                    Text("Name")
                     TextField("first name", text: $userInfo.firstName).disableAutocorrection(true).autocapitalization(.none)
                     TextField("last name", text: $userInfo.lastName).disableAutocorrection(true).autocapitalization(.none)
                 }.padding()
@@ -39,23 +53,59 @@ struct AccountInfoView: View {
                 
                 HStack {
                     Image(systemName: "calendar.circle.fill")
-                    VStack {
-                        DisclosureGroup("Month") {
-                            Text("January")
-                            Text("February")
-                            Text("March")
-                            Text("April")
-                            Text("May")
-                            Text("June")
-                            Text("July")
-                            Text("August")
-                            Text("September")
-                            Text("October")
-                            Text("November")
-                            Text("December")
+                    
+                    Text("Birthdate")
+                    
+                    VStack(alignment: .leading) {
+                        DisclosureGroup("\(months[monthSelection]!)", isExpanded: $monthIsExpanded) {
+                            ScrollView{
+                                VStack(alignment: .leading, spacing: 15){
+                                    ForEach(1...12, id: \.self) { num in
+                                        Text("\(months[num]!)")
+                                            .onTapGesture {
+                                                self.monthSelection = num
+                                                self.monthIsExpanded.toggle()
+                                            }
+                                    }
+                                }
+                            }
                         }
-                        
                     }
+                    
+                    VStack(alignment: .leading) {
+                        DisclosureGroup("\(dateSelection)", isExpanded: $dateIsExpanded) {
+                            ScrollView{
+                                VStack{
+                                    ForEach(1...31, id: \.self) { num in
+                                        Text("\(num)")
+                                            .onTapGesture {
+                                                self.dateSelection = num
+                                                withAnimation{
+                                                    self.dateIsExpanded.toggle()
+                                                }
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        DisclosureGroup("\(yearSelection)", isExpanded: $yearIsExpanded) {
+                            ScrollView{
+                                VStack{
+                                    ForEach((1900...2022), id: \.self) { num in
+                                        Text("\(num)")
+                                            .onTapGesture {
+                                                self.yearSelection = num
+                                                self.yearIsExpanded.toggle()
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
                     
                 }
                 .padding()
