@@ -20,6 +20,9 @@ struct AccountInfoView: View {
     @State private var yearSelection = 1
     @State private var yearIsExpanded = false
     
+    @State private var birthDate = Date()
+    
+    
     @State var months = [1: "January",
                          2: "February",
                          3: "March",
@@ -39,15 +42,19 @@ struct AccountInfoView: View {
                 .foregroundColor(Color.lilac)
                 .edgesIgnoringSafeArea(.all)
             VStack{
-                Spacer()
+                Text("Welcome to ScopeIt")
+                    .font(.title)
+                    .padding()
+                    .padding(.top, 200)
                 
                 HStack {
                     Image(systemName: "person.circle.fill")
                     Text("Name")
+                        .font(.title3)
                     TextField("first name", text: $userInfo.firstName).disableAutocorrection(true).autocapitalization(.none)
                     TextField("last name", text: $userInfo.lastName).disableAutocorrection(true).autocapitalization(.none)
                 }.padding()
-                    .padding(.top, 100)
+                    .padding(.top, 50)
                     .padding(.bottom, 10)
                 
                 
@@ -55,63 +62,29 @@ struct AccountInfoView: View {
                     Image(systemName: "calendar.circle.fill")
                     
                     Text("Birthdate")
-                    
-                    VStack(alignment: .leading) {
-                        DisclosureGroup("\(months[monthSelection]!)", isExpanded: $monthIsExpanded) {
-                            ScrollView{
-                                VStack(alignment: .leading, spacing: 15){
-                                    ForEach(1...12, id: \.self) { num in
-                                        Text("\(months[num]!)")
-                                            .onTapGesture {
-                                                self.monthSelection = num
-                                                self.monthIsExpanded.toggle()
-                                            }
-                                    }
-                                }
-                            }
-                        }
+                        .font(.title3)
+                    DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {
                     }
                     
-                    VStack(alignment: .leading) {
-                        DisclosureGroup("\(dateSelection)", isExpanded: $dateIsExpanded) {
-                            ScrollView{
-                                VStack{
-                                    ForEach(1...31, id: \.self) { num in
-                                        Text("\(num)")
-                                            .onTapGesture {
-                                                self.dateSelection = num
-                                                withAnimation{
-                                                    self.dateIsExpanded.toggle()
-                                                }
-                                            }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                    VStack(alignment: .leading) {
-                        DisclosureGroup("\(yearSelection)", isExpanded: $yearIsExpanded) {
-                            ScrollView{
-                                VStack{
-                                    ForEach((1900...2022), id: \.self) { num in
-                                        Text("\(num)")
-                                            .onTapGesture {
-                                                self.yearSelection = num
-                                                self.yearIsExpanded.toggle()
-                                            }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                    
-                }
-                .padding()
-                .padding(.top, 10)
-                Spacer()
+                }.padding()
+                    .padding(.top, 10)
+                    .padding(.bottom, 100)
                 
+                
+                Button("Finish"){
+                    
+                    userInfo.loggedin = true
+                    userInfo.createAcct = false
+                    userInfo.accountInfo = false
+                    
+                    
+                    
+                }.padding()
+                    .frame(width: UIScreen.main.bounds.width - 100)
+                    .background(Color.white)
+                    .foregroundColor(.black)
+                    .cornerRadius(10)
+                    .padding(.top, 50)
                 
                 
                 Spacer()
@@ -126,3 +99,4 @@ struct AccountInfoView_Previews: PreviewProvider {
         AccountInfoView()
     }
 }
+

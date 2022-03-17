@@ -7,9 +7,15 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct DailyView: View {
+    @StateObject var fetchData = FetchData()
+    @State var res = Result()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(res.affirmation ?? "no affirmation")
+        
     }
 }
 

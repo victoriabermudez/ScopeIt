@@ -8,8 +8,32 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    @EnvironmentObject var userInfo : UserInfo
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: "person.circle.fill")
+            Text("Name")
+                .font(.title3)
+            TextField("first name", text: $userInfo.firstName).disableAutocorrection(true).autocapitalization(.none)
+            TextField("last name", text: $userInfo.lastName).disableAutocorrection(true).autocapitalization(.none)
+        }.padding()
+            .padding(.top, 50)
+            .padding(.bottom, 10)
+        
+        
+        HStack {
+            Image(systemName: "calendar.circle.fill")
+            
+            Text("Birthdate")
+                .font(.title3)
+            DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {
+            }
+            
+        }.padding()
+            .padding(.top, 10)
+            .padding(.bottom, 100)
     }
 }
 

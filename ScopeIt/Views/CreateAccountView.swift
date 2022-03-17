@@ -12,6 +12,8 @@ struct CreateAccountView: View {
     @EnvironmentObject var userInfo : UserInfo
     //@State var userInfo : UserInfo = UserInfo()
     
+    @State private var showInsufficientPasswordAlert = false
+    
     var body: some View {
         ZStack{
             Rectangle()
@@ -25,7 +27,7 @@ struct CreateAccountView: View {
                     TextField("email address", text: $userInfo.email).disableAutocorrection(true).autocapitalization(.none).keyboardType(.emailAddress)
                 }.padding()
                     .padding(.top, 100)
-                .padding(.bottom, 10)
+                    .padding(.bottom, 10)
                 
                 
                 HStack {
@@ -44,24 +46,37 @@ struct CreateAccountView: View {
                             userInfo.createAcct = false
                             userInfo.accountInfo = true
                         }
+                        else{
+                            showInsufficientPasswordAlert = true
+
+                        }
                     }
-                }.padding()
-                .frame(width: UIScreen.main.bounds.width - 100)
-                .background(Color.white)
-                .foregroundColor(.black)
-                .cornerRadius(10)
-                .padding(.top, 50)
+                    
+                }.alert(isPresented: $showInsufficientPasswordAlert){
+                    Alert(
+                        title: Text("Insufficient Password"),
+                        message: Text("The password must be 6 characters long or more"),
+                        dismissButton: .default(Text("Try again"))
+                        )
+                }
+                .padding()
+                    .frame(width: UIScreen.main.bounds.width - 100)
+                    .background(Color.white)
+                    .foregroundColor(.black)
+                    .cornerRadius(10)
+                    .padding(.top, 50)
+                
                 Button("Back to Login"){
                     
-                            userInfo.loggedin = false
-                            userInfo.createAcct = false
-                        
+                    userInfo.loggedin = false
+                    userInfo.createAcct = false
+                    
                     
                 }.padding()
-                .font(.system(size: 15))
-                .frame(width: UIScreen.main.bounds.width - 200)
-                .foregroundColor(.black)
-                .padding(.top, 10)
+                    .font(.system(size: 15))
+                    .frame(width: UIScreen.main.bounds.width - 200)
+                    .foregroundColor(.black)
+                    .padding(.top, 10)
                 
                 Spacer()
                 
