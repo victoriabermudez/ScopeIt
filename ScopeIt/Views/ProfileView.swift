@@ -10,30 +10,49 @@ import SwiftUI
 struct ProfileView: View {
     
     @EnvironmentObject var userInfo : UserInfo
-
+    @State private var birthDate = Date()
+    
     var body: some View {
-        HStack {
-            Image(systemName: "person.circle.fill")
-            Text("Name")
-                .font(.title3)
-            TextField("first name", text: $userInfo.firstName).disableAutocorrection(true).autocapitalization(.none)
-            TextField("last name", text: $userInfo.lastName).disableAutocorrection(true).autocapitalization(.none)
-        }.padding()
-            .padding(.top, 50)
-            .padding(.bottom, 10)
         
-        
-        HStack {
-            Image(systemName: "calendar.circle.fill")
+        VStack{
+            HStack {
+                Image(systemName: "person.circle.fill")
+                Text("Name")
+                    .font(.title3)
+                TextField("first name", text: $userInfo.firstName).disableAutocorrection(true).autocapitalization(.none)
+                TextField("last name", text: $userInfo.lastName).disableAutocorrection(true).autocapitalization(.none)
+            }.padding()
+                .padding(.top, 50)
+                .padding(.bottom, 10)
             
-            Text("Birthdate")
-                .font(.title3)
-            DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {
-            }
             
-        }.padding()
-            .padding(.top, 10)
-            .padding(.bottom, 100)
+            HStack {
+                Image(systemName: "calendar.circle.fill")
+                
+                Text("Birthdate")
+                    .font(.title3)
+                DatePicker(selection: $userInfo.birthdate, in: ...Date(), displayedComponents: .date) {
+                }
+                
+            }.padding()
+                .padding(.top, 10)
+                .padding(.bottom, 100)
+            
+            Button("Log Out"){
+                
+                userInfo.loggedin = false
+                userInfo.createAcct = false
+                userInfo.accountInfo = false
+                
+                
+                
+            }.padding()
+                .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
+                .background(Color.red)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .padding(.top, 50)
+        }
     }
 }
 

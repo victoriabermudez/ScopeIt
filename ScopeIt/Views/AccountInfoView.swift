@@ -64,6 +64,7 @@ struct AccountInfoView: View {
                     Text("Birthdate")
                         .font(.title3)
                     DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {
+                        
                     }
                     
                 }.padding()
@@ -73,6 +74,7 @@ struct AccountInfoView: View {
                 
                 Button("Finish"){
                     
+                    userInfo.birthdate = birthDate
                     userInfo.loggedin = true
                     userInfo.createAcct = false
                     userInfo.accountInfo = false
@@ -80,7 +82,7 @@ struct AccountInfoView: View {
                     
                     
                 }.padding()
-                    .frame(width: UIScreen.main.bounds.width - 100)
+                    .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
                     .background(Color.white)
                     .foregroundColor(.black)
                     .cornerRadius(10)

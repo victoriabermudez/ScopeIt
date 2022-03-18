@@ -57,7 +57,7 @@ struct LoginView: View {
                                 showForgotPasswordSheet = false
                             }
                             .padding()
-                            .frame(width: UIScreen.main.bounds.width - 100)
+                            .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
                             .background(Color.black)
                             .foregroundColor(.white)
                             .cornerRadius(10)
@@ -100,7 +100,7 @@ struct LoginView: View {
                 }
                 
                 .padding()
-                    .frame(width: UIScreen.main.bounds.width - 100)
+                    .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
                     .background(Color.black)
                     .foregroundColor(.white)
                     .cornerRadius(10)
@@ -112,7 +112,7 @@ struct LoginView: View {
                 Button("Create An Account") {
                     userInfo.createAcct = true
                 }.padding()
-                    .frame(width: UIScreen.main.bounds.width - 100)
+                    .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
                     .background(Color.white)
                     .foregroundColor(.black)
                     .cornerRadius(10)
