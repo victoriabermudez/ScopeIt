@@ -22,7 +22,6 @@ struct AccountInfoView: View {
     
     @State private var birthDate = Date()
     
-    
     @State var months = [1: "January",
                          2: "February",
                          3: "March",
@@ -36,7 +35,23 @@ struct AccountInfoView: View {
                          11: "November",
                          12: "December"]
     
+//    func date(from: DateComponents) -> Date{
+//        var comps = DateComponents()
+//        comps.day = 21
+//        comps.month = 10
+//        comps.year = 2020
+//
+//        let date = Calendar.current.date(from: comps)!
+//        return date
+//    }
+//
+//    @State var selectionDate = date(from: birthDate)
+//
+//
+//
     var body: some View {
+        
+
         ZStack{
             Rectangle()
                 .foregroundColor(Color.lilac)
@@ -71,15 +86,15 @@ struct AccountInfoView: View {
                     .padding(.top, 10)
                     .padding(.bottom, 100)
                 
-                switch some value to consider {
-                case value 1:
-                    respond to value 1
-                case value 2,
-                     value 3:
-                    respond to value 2 or 3
-                default:
-                    otherwise, do something else
-                }
+//                switch some value to consider {
+//                case value 1:
+//                    respond to value 1
+//                case value 2,
+//                     value 3:
+//                    respond to value 2 or 3
+//                default:
+//                    otherwise, do something else
+//                }
 
                 
                 

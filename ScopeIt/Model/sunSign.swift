@@ -7,11 +7,14 @@
 
 import Foundation
 
-var comps = DateComponents(year: 2006, month: 12, day: 12)
-let date = Calendar.current.date(from: comps)!
+//var comps = DateComponents(year: 2006, month: 12, day: 12)
+//let date = Calendar.current.date(from: comps)!
 
 struct sunSign{
     
+    @EnvironmentObject var userInfo : UserInfo
+    let components = Calendar.current.dateComponents([.hour, .minute], from: userInfo.birthdate)
+
     
     
 }
