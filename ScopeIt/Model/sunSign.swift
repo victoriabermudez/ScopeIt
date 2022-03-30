@@ -12,8 +12,8 @@ import Foundation
 
 struct sunSign{
     
-    @EnvironmentObject var userInfo : UserInfo
-    let components = Calendar.current.dateComponents([.hour, .minute], from: userInfo.birthdate)
+    
+   // let components = Calendar.current.dateComponents([.hour, .minute], from: userInfo.birthdate)
 
     
     

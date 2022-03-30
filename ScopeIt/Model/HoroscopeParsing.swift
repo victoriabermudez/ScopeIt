@@ -1,9 +1,16 @@
 //
+
 //  HoroscopeParsing.swift
+
 //  ScopeIt
+
 //
-//  Created by Michelle Kelly (student LM) on 3/29/22.
+
+//  Created by Angela Ge (student LM) on 3/14/22.
+
 //
+
+
 
 import Foundation
 
@@ -65,6 +72,8 @@ class FetchDataHoroscope : ObservableObject{
 
                     print("Can't decode JSON")
 
+                    print("----------------------------------------------------------------------------------------------------------------")
+
                 }
 
                 
@@ -81,21 +90,13 @@ class FetchDataHoroscope : ObservableObject{
 
 struct ResponseHoroscope: Codable{
 
-    var resultsHoroscope : [ResultHoroscope] = [ResultHoroscope]()
+    var horoscope: String?
 
 }
 
 
 
-struct ResultHoroscope: Codable{
-
-    var horoscope : String?
-
-}
-
-
-
-extension ResultHoroscope : Identifiable{
+extension ResponseHoroscope : Identifiable{
 
     var id: String {
 
