@@ -40,6 +40,8 @@ struct ProfileView: View {
                 .padding(.top, 10)
                 .padding(.bottom, 100)
             
+            Text(userInfo.sign)
+            
             Button("Log Out"){
                 
                 userInfo.loggedin = false

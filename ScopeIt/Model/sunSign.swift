@@ -12,8 +12,29 @@ import Foundation
 
 struct sunSign{
     
-    
-   // let components = Calendar.current.dateComponents([.hour, .minute], from: userInfo.birthdate)
+    static func getSunSign(_ userInfo: UserInfo){
+        let birthDateComponents = Calendar.current.dateComponents([.month, .day], from: userInfo.birthdate)
+        
+        //capricorn (dec 22-jan 20)
+        if  (birthDateComponents.month == 12 && birthDateComponents.day! >= 22) || (birthDateComponents.month == 1 && birthDateComponents.day! <= 20) {
+            userInfo.sign = "Capricorn"
+        }
+        
+        else if (birthDateComponents.month == 1 && birthDateComponents.day! >= 21) || (birthDateComponents.month == 2 && birthDateComponents.day! <= 18) {
+            userInfo.sign = "Aquarius"
+        }
+        
+        else if (birthDateComponents.month == 2 && birthDateComponents.day! >= 19) || (birthDateComponents.month == 3 && birthDateComponents.day! <= 20) {
+            userInfo.sign = "Pisces"
+        }
+        
+        else if (birthDateComponents.month == 3 && birthDateComponents.day! >= 21) || (birthDateComponents.month == 4 && birthDateComponents.day! <= 20) {
+            userInfo.sign = "Aries"
+        }
+        
+        }//end func
+        
+   //
 
     
     
