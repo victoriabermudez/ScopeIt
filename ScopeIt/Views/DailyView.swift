@@ -11,7 +11,7 @@ import SwiftUI
 
 struct DailyView: View {
     @StateObject var fetchData = FetchData()
-    @State var res = Result()
+    @State var res = Response()
     
     var body: some View {
         Text(res.affirmation ?? "no affirmation")
