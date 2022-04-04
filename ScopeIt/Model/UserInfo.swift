@@ -13,9 +13,8 @@ class UserInfo: ObservableObject{
     @Published var lastName: String
     var name: String
     @Published var birthdate: Date = Date()
-    @Published var sign : String
     @Published var password: String
-    //@Published var sunSign: sunSign
+    @Published var sign: String
     @Published var image: UIImage = UIImage(named: "user")!
     
     @Published var loggedin: Bool = false
@@ -30,7 +29,7 @@ class UserInfo: ObservableObject{
         self.loggedin = loggedin
         self.password = ""
         self.createAcct = createAcct
-        self.sign = sign
+        self.sign = ""
         
 
         

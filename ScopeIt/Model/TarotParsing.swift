@@ -1,17 +1,16 @@
-
-
-//  AffirmationsParsing.swift
-
-//  JSON 121521
-
-//  Created by Angela Ge (student LM) on 12/15/21.
+//
+//  TarotParsing.swift
+//  ScopeIt
+//
+//  Created by Michelle Kelly (student LM) on 4/4/22.
+//
 
 import Foundation
 
 
-class FetchDataAffirmation : ObservableObject{
+class FetchDataTarot : ObservableObject{
     
-    @Published var responsesAffirmation : ResponseAffirmation = ResponseAffirmation()
+    @Published var responsesTaor : ResponseTarot = ResponseTarot()
         init(){
             guard let url = URL(string: "https://www.affirmations.dev") else {
                 print("no data")
