@@ -40,6 +40,10 @@ struct sunSign{
     
 }
 
+struct Capricorn {
+    
+}
+
 //switch some value to consider {
 //case value 1:
 //    respond to value 1

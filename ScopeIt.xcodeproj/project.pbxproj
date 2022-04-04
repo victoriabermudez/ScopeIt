@@ -16,6 +16,8 @@
 		2DB7990927C7D120008517E8 /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7990827C7D120008517E8 /* FirebaseFunctions.swift */; };
 		2DB7990B27C7D15A008517E8 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7990A27C7D15A008517E8 /* UserInfo.swift */; };
 		2DB7990D27C7D1B4008517E8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7990C27C7D1B4008517E8 /* LoginView.swift */; };
+		2DC4D4DF27FB12B800794D8A /* AdviceParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC4D4DE27FB12B800794D8A /* AdviceParsing.swift */; };
+		2DC4D4E127FB13D100794D8A /* TarotParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC4D4E027FB13D100794D8A /* TarotParsing.swift */; };
 		2DD13BB427C67B6D00E8C6D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DD13BB327C67B6D00E8C6D3 /* GoogleService-Info.plist */; };
 		2DE673D627CFBBA30064E60E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE673D527CFBBA30064E60E /* HomeView.swift */; };
 		2DF1B67A27DF737C00CC4B5D /* DailyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF1B67927DF737C00CC4B5D /* DailyView.swift */; };
@@ -58,6 +60,8 @@
 		2DB7990827C7D120008517E8 /* FirebaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFunctions.swift; sourceTree = "<group>"; };
 		2DB7990A27C7D15A008517E8 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		2DB7990C27C7D1B4008517E8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2DC4D4DE27FB12B800794D8A /* AdviceParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceParsing.swift; sourceTree = "<group>"; };
+		2DC4D4E027FB13D100794D8A /* TarotParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotParsing.swift; sourceTree = "<group>"; };
 		2DD13BB327C67B6D00E8C6D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DE673D527CFBBA30064E60E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2DF1B67927DF737C00CC4B5D /* DailyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyView.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 				2DB7990827C7D120008517E8 /* FirebaseFunctions.swift */,
 				2D6A7C2427CE5CCD00782D02 /* Constants.swift */,
 				2D43C03927E354DE00FBCFD1 /* AffirmationsParsing.swift */,
+				2DC4D4E027FB13D100794D8A /* TarotParsing.swift */,
 				2DA6579B27F328FA00EDCFAF /* HoroscopeParsing.swift */,
 				2D61EE7D27E4C0A9000A7537 /* sunSign.swift */,
 			);
@@ -129,6 +134,7 @@
 				2DE673D527CFBBA30064E60E /* HomeView.swift */,
 				2D69D1E127D7A7A8004ECB8C /* AccountInfoView.swift */,
 				2DF1B67927DF737C00CC4B5D /* DailyView.swift */,
+				2DC4D4DE27FB12B800794D8A /* AdviceParsing.swift */,
 				2DF1B67B27DF73C700CC4B5D /* HoroscopeView.swift */,
 				2DF1B67D27DF73D700CC4B5D /* SettingsView.swift */,
 				2DF1B67F27DF755700CC4B5D /* ProfileView.swift */,
@@ -392,6 +398,8 @@
 				2DB7990B27C7D15A008517E8 /* UserInfo.swift in Sources */,
 				2DF1B68027DF755700CC4B5D /* ProfileView.swift in Sources */,
 				BC3909B927C51BE100D8C0CC /* ContentView.swift in Sources */,
+				2DC4D4E127FB13D100794D8A /* TarotParsing.swift in Sources */,
+				2DC4D4DF27FB12B800794D8A /* AdviceParsing.swift in Sources */,
 				BC3909B727C51BE100D8C0CC /* ScopeItApp.swift in Sources */,
 				2D6A7C2727CE616900782D02 /* CreateAccountView.swift in Sources */,
 				2D43C03A27E354DE00FBCFD1 /* AffirmationsParsing.swift in Sources */,
