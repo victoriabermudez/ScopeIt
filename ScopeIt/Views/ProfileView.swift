@@ -40,7 +40,7 @@ struct ProfileView: View {
                 .padding(.top, 10)
                 .padding(.bottom, 100)
             
-            Text(userInfo.sign)
+            Text(userInfo.sign.signName)
                 .font(.title3)
             
             Button("Log Out"){

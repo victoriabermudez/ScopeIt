@@ -24,7 +24,7 @@ struct DailyView: View {
 
     @StateObject var fetchDataAffirmation = FetchDataAffirmation()
 
-    @StateObject var fetchDataAdvice = FetchDataAdvice()
+    //@StateObject var fetchDataAdvice = FetchDataAdvice()
 
     
 
@@ -34,7 +34,7 @@ struct DailyView: View {
 
         Text(fetchDataAffirmation.responsesAffirmation.affirmation ?? "no affirmation")
 
-        Text(fetchDataAdvice.responsesAdvice.result.slip.advice ?? "no advice")
+        //Text(fetchDataAdvice.responsesAdvice.result.slip.advice ?? "no advice")
 
         }
 
