@@ -10,7 +10,7 @@ import Foundation
 //var comps = DateComponents(year: 2006, month: 12, day: 12)
 //let date = Calendar.current.date(from: comps)!
 
-
+let userInfo : UserInfo = UserInfo()
 
 struct Sign{
     
@@ -18,7 +18,6 @@ struct Sign{
     var signDescription : String
     var signCompatibility : [String: Bool]
     
-    var userInfo : UserInfo = UserInfo()
     
     //static func getSunSign(_ userInfo: UserInfo){
     init(signName: String = "", signDescription:String = "", signCompatibility : [String: Bool] = [:]){
@@ -26,7 +25,7 @@ struct Sign{
         self.signName = signName
         self.signDescription = signDescription
         self.signCompatibility = signCompatibility
-        
+
         let birthDateComponents = Calendar.current.dateComponents([.month, .day], from: userInfo.birthdate)
         
         print(birthDateComponents)

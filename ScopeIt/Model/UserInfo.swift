@@ -15,7 +15,7 @@ class UserInfo: ObservableObject{
     @Published var birthdate: Date = Date()
     @Published var password: String
     @Published var sign: Sign
-    @Published var image: UIImage = UIImage(named: "user")!
+    //@Published var image: UIImage = UIImage(named: "user")!
     
     @Published var loggedin: Bool = false
     @Published var createAcct: Bool = false
