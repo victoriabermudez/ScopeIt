@@ -14,7 +14,7 @@ class UserInfo: ObservableObject{
     var name: String
     @Published var birthdate: Date = Date()
     @Published var password: String
-    @Published var sign: Sign
+    //@Published var sign: Sign
     @Published var image: UIImage = UIImage(named: "user")!
     
     @Published var loggedin: Bool = false
@@ -29,7 +29,7 @@ class UserInfo: ObservableObject{
         self.loggedin = loggedin
         self.password = ""
         self.createAcct = createAcct
-        self.sign = Sign()
+        //self.sign = Sign()
         
 
         

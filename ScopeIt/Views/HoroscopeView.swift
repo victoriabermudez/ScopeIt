@@ -26,7 +26,7 @@ struct HoroscopeView: View {
 
     var body: some View {
 
-        Text(resHoroscope.horoscope ?? "no ")
+        Text(fetchDataHoroscope.responsesHoroscope.horoscope ?? "no ")
 
     }
 
