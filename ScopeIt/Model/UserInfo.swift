@@ -21,6 +21,14 @@ class UserInfo: ObservableObject{
     @Published var createAcct: Bool = false
     @Published var accountInfo: Bool = false
     
+    init(){
+        self.email = ""
+        self.firstName = ""
+        self.lastName = ""
+        self.name = ""
+        self.password = ""
+    }
+    
     init(email: String = "", firstName: String = "", lastName: String = "", loggedin: Bool = false, createAcct: Bool = false, accountInfo: Bool = false, sign : String = ""){
         self.email = email
         self.firstName = firstName
