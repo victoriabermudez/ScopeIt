@@ -38,7 +38,11 @@ struct DailyView: View {
             //Text(fetchDataAdvice.responsesAdvice.result.slip.advice ?? "no advice")
             
             //Text(Name ?? "non")
-           //Text(fetchDataTarot.responsesTarot.cards[0].name ?? "non")
+            
+            ForEach(fetchDataTarot.responsesTarot.cards) { card in
+                    Text(card.name!)
+
+         //  Text(String(fetchDataTarot.responsesTarot.cards.count) ?? "non")
             ///?? "no tarot")
             
         }
@@ -46,7 +50,7 @@ struct DailyView: View {
     }
     
 }
-
+}
 
 
 struct DailyView_Previews: PreviewProvider {
