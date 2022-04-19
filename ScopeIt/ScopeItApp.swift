@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 @main
-struct SlowmoGramApp: App {
+struct ScopeItApp : App {
     
     @StateObject var userInfo = UserInfo()
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate

@@ -35,6 +35,7 @@ struct DailyView: View {
             
             Text(fetchDataAffirmation.responsesAffirmation.affirmation ?? "no affirmation")
             
+            Text("")
             //Text(fetchDataAdvice.responsesAdvice.result.slip.advice ?? "no advice")
             
             //Text(Name ?? "non")
