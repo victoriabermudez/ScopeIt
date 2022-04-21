@@ -30,7 +30,7 @@ class UserInfo: ObservableObject{
         //self.name = ""
         self.password = ""
         self.sign = Sign()
-        self.birthDateComponents = Calendar.current.dateComponents([.month, .day], from: birthdate)
+        self.birthDateComponents = Calendar.current.dateComponents([.year, .month, .day], from: birthdate)
         
         if (birthDateComponents.month == 12 && birthDateComponents.day! >= 22) || (birthDateComponents.month == 1 && birthDateComponents.day! <= 20) {
             self.sign.signName = "Capricorn"

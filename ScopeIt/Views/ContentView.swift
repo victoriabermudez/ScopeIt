@@ -23,8 +23,7 @@ struct ContentView: View {
                         HomeView()
                     }
                }
-//        DailyView()
-        //HomeView()
+
     }
 }
 

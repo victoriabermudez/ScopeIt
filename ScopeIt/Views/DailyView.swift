@@ -22,6 +22,13 @@ import SwiftUI
 
 struct DailyView: View {
     
+    @EnvironmentObject var userInfo: UserInfo
+
+    
+    @StateObject var fetchDataHoroscope = FetchDataHoroscope()
+
+    @State var resHoroscope = ResponseHoroscope()
+    
     @StateObject var fetchDataAffirmation = FetchDataAffirmation()
     
     @StateObject var fetchDataAdvice = FetchDataAdvice()
@@ -32,6 +39,8 @@ struct DailyView: View {
     var body: some View {
         
         VStack{
+            
+            Text(fetchDataHoroscope.responsesHoroscope.horoscope ?? "no ")
             
             Text(fetchDataAffirmation.responsesAffirmation.affirmation ?? "no affirmation")
             

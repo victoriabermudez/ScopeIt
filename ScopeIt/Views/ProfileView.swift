@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     
     @EnvironmentObject var userInfo : UserInfo
-    @State private var birthDate = Date()
+    //@State private var birthDate = Date()
     
     
     
@@ -33,24 +33,32 @@ struct ProfileView: View {
             HStack {
                 Image(systemName: "calendar.circle.fill")
                 
-//                Text("Birthdate")
-//                    .font(.title3)
-//                DatePicker(selection: $userInfo.birthdate, in: ...Date(), displayedComponents: .date) {
-//                }
+                Text("Birthdate")
+                    .font(.title3)
                 
+                Text("\(userInfo.birthDateComponents.month!)")
+//                Text(userInfo.birthDateComponents.day)
+//                Text(userInfo.birthDateComponents.year)
+                
+                //                DatePicker(selection: $userInfo.birthdate, in: ...Date(), displayedComponents: .date) {
+                //                }
+                //
                 
             }.padding()
                 .padding(.top, 10)
                 .padding(.bottom, 100)
             
-            
-            Text(userInfo.sign.signName)
-                .padding()
+            HStack{
+                Text("Your sign: ")
+                
+                Text(userInfo.sign.signName)
+                    .padding()
                     .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
                     .background(Color.lilac)
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .padding(.top, 50)
+            }
             
             Button("Log Out"){
                 

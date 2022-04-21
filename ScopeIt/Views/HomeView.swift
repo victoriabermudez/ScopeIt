@@ -19,9 +19,9 @@ struct HomeView: View {
                     .tabItem{
                         Label("Daily", systemImage: "calendar.circle.fill")
                     }
-                HoroscopeView()
+                SunSignView()
                     .tabItem{
-                        Label("Horoscope", systemImage: "moon.circle.fill")
+                        Label("Sun Sign", systemImage: "moon.circle.fill")
                     }
                 SettingsView()
                     .tabItem{
@@ -29,7 +29,7 @@ struct HomeView: View {
                     }
                 ProfileView()
                     .tabItem{
-                        Label("Profile", systemImage: "person.circle.fill")
+                        Label("Account", systemImage: "person.circle.fill")
                     }
             }
         }

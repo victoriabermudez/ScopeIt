@@ -17,7 +17,7 @@ class Sign : ObservableObject {
     @Published var signCompatibility : [String : Bool]
     
     init(){
-        self.signName = "khg"
+        self.signName = ""
         self.signDescription = ""
         self.signCompatibility = [:]
 
