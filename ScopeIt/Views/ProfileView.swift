@@ -37,8 +37,8 @@ struct ProfileView: View {
                     .font(.title3)
                 
                 Text("\(userInfo.birthDateComponents.month!)")
-//                Text(userInfo.birthDateComponents.day)
-//                Text(userInfo.birthDateComponents.year)
+                Text("\(userInfo.birthDateComponents.day!)")
+                Text("\(userInfo.birthDateComponents.year!)")
                 
                 //                DatePicker(selection: $userInfo.birthdate, in: ...Date(), displayedComponents: .date) {
                 //                }

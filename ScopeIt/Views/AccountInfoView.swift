@@ -20,7 +20,7 @@ struct AccountInfoView: View {
     @State private var yearSelection = 1
     @State private var yearIsExpanded = false
     
-    @State private var birthDate = Date()
+    //@State private var birthDate = Date()
     
     @State var months = [1: "January",
                          2: "February",
@@ -78,7 +78,7 @@ struct AccountInfoView: View {
                     
                     Text("Birthdate")
                         .font(.title3)
-                    DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {
+                    DatePicker(selection: $userInfo.birthdate, in: ...Date(), displayedComponents: .date) {
                         
                     }
                     
@@ -100,7 +100,7 @@ struct AccountInfoView: View {
                 
                 Button("Finish"){
                     
-                    userInfo.birthdate = birthDate
+                
                     userInfo.loggedin = true
                     userInfo.createAcct = false
                     userInfo.accountInfo = false
