@@ -86,10 +86,6 @@ class UserInfo: ObservableObject{
         self.password = ""
         self.birthdate = Date()
         
-        
-        
-        print(sign.signName)
-        
     }
     
 //    init(email: String = "", firstName: String = "", lastName: String = "", loggedin: Bool = false, createAcct: Bool = false, accountInfo: Bool = false, sign : String = ""){

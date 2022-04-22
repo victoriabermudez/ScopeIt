@@ -32,13 +32,13 @@ struct ProfileView: View {
             
             HStack {
                 Image(systemName: "calendar.circle.fill")
-                
+                Spacer()
                 Text("Birthdate")
                     .font(.title3)
-                
+                Spacer()
                 Text("\(userInfo.birthDateComponents.month!)")
                 Text("\(userInfo.birthDateComponents.day!)")
-                Text("\(userInfo.birthDateComponents.year!)")
+                Text(verbatim: "\(userInfo.birthDateComponents.year!)")
                 
                 //                DatePicker(selection: $userInfo.birthdate, in: ...Date(), displayedComponents: .date) {
                 //                }
