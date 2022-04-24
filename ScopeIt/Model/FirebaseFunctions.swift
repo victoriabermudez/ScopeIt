@@ -31,22 +31,22 @@ struct FirebaseFunctions{
                 
                 let uid = user.uid
                 
-                Firestore.firestore().collection("users").document(uid).getDocument{
-                    document, _ in
-                    guard let document = document else {return}
-                    
-                    let imageURL = document.get("image") as? String ?? ""
-                    userInfo.name = document.get("name") as? String ?? ""
-                    
-                    Storage.storage()
-                        .reference(forURL: imageURL)
-                        .getData(maxSize: 1 * 1024 * 1024) { data, error in
-                            if let imageData = data{
-                                userInfo.image = UIImage(data: imageData) ??
-                                    UIImage(named: "user")!
-                            }//end if
-                        }//end closure
-                }//end firestore
+//                Firestore.firestore().collection("users").document(uid).getDocument{
+//                    document, _ in
+//                    guard let document = document else {return}
+//                    
+//                    let imageURL = document.get("image") as? String ?? ""
+//                    userInfo.name = document.get("name") as? String ?? ""
+//                    
+//                    Storage.storage()
+//                        .reference(forURL: imageURL)
+//                        .getData(maxSize: 1 * 1024 * 1024) { data, error in
+//                            if let imageData = data{
+//                                userInfo.image = UIImage(data: imageData) ??
+//                                    UIImage(named: "user")!
+//                            }//end if
+//                        }//end closure
+//                }//end firestore
             }//end auth
         }//end func
         
