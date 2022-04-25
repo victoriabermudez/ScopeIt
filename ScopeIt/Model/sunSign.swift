@@ -22,11 +22,15 @@ class Sign : ObservableObject {
     @Published var backgroundImage : String
 
 
-    init(signName : String, backgroundColor : String){
+    init(signName : String, backgroundColor : String, textColor : String, text2Color : String, accentColor : String, backgroundImage : String){
         self.signName = signName
         self.signDescription = ""
         self.signCompatibility = [:]
         self.backgroundColor = backgroundColor
+        self.textColor = textColor
+        self.text2Color = text2Color
+        self.accentColor = accentColor
+        self.backgroundImage = backgroundImage
 
     }
     

@@ -42,6 +42,7 @@ struct CreateAccountView: View {
                 Button("Create Account"){
                     FirebaseFunctions.authenticate(email: userInfo.email, password: userInfo.password) { success in
                         if success{
+                            HomeView()
                             userInfo.loggedin = false
                             userInfo.createAcct = false
                             userInfo.accountInfo = true

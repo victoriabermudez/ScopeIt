@@ -14,6 +14,11 @@ struct SunSignView: View {
     @EnvironmentObject var userInfo: UserInfo
     
     var body: some View {
+        
+        ZStack{
+        
+            Image("\(userInfo.sign.backgroundImage)")
+            
         Text(userInfo.sign.signName)
             .padding()
             .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
@@ -21,6 +26,7 @@ struct SunSignView: View {
             .foregroundColor(.white)
             .cornerRadius(10)
             .padding(.top, 50)
+    }
     }
 }
 

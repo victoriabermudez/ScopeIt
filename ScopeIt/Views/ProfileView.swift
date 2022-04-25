@@ -30,23 +30,46 @@ struct ProfileView: View {
                 .padding(.bottom, 10)
             
             
+            
             HStack {
                 Image(systemName: "calendar.circle.fill")
-                Spacer()
+                
                 Text("Birthdate")
                     .font(.title3)
-                Spacer()
-                Text("\(userInfo.birthDateComponents.month!)")
-                Text("\(userInfo.birthDateComponents.day!)")
-                Text(verbatim: "\(userInfo.birthDateComponents.year!)")
-                
-                //                DatePicker(selection: $userInfo.birthdate, in: ...Date(), displayedComponents: .date) {
-                //                }
-                //
+                DatePicker(selection: $userInfo.birthdate, in: ...Date(), displayedComponents: .date) {
+                    
+                }
                 
             }.padding()
                 .padding(.top, 10)
                 .padding(.bottom, 100)
+            
+            TextField("location", text: $userInfo.location).disableAutocorrection(true).autocapitalization(.none)
+
+                                .padding()
+
+                                .padding(.top, 10)
+
+                                .padding(.bottom, 100)
+            
+            
+            //            HStack {
+            //                Image(systemName: "calendar.circle.fill")
+            //                Spacer()
+            //                Text("Birthdate")
+            //                    .font(.title3)
+            //                Spacer()
+            //                Text("\(userInfo.birthDateComponents.month!)")
+            //                Text("\(userInfo.birthDateComponents.day!)")
+            //                Text(verbatim: "\(userInfo.birthDateComponents.year!)")
+            //
+            //                //                DatePicker(selection: $userInfo.birthdate, in: ...Date(), displayedComponents: .date) {
+            //                //                }
+            //                //
+            //
+            //            }.padding()
+            //                .padding(.top, 10)
+            //                .padding(.bottom, 100)
             
             HStack{
                 Text("Your sign: ")
