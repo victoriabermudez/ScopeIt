@@ -16,6 +16,11 @@ class Sign : ObservableObject {
     @Published var signDescription : String
     @Published var signCompatibility : [String : Bool]
     @Published var backgroundColor : String
+    @Published var textColor : String
+    @Published var text2Color : String
+    @Published var accentColor : String
+    @Published var backgroundImage : String
+
 
     init(signName : String, backgroundColor : String){
         self.signName = signName
