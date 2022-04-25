@@ -17,7 +17,8 @@ class UserInfo: ObservableObject{
     var sign: Sign {
         
         if (birthDateComponents.month == 12 && birthDateComponents.day! >= 22) || (birthDateComponents.month == 1 && birthDateComponents.day! <= 20) {
-            return Sign(signName : "Capricorn")
+            return Sign(signName : "Capricorn", backgroundColor : "CapricornBG")
+
         }
         
         else if (birthDateComponents.month == 1 && birthDateComponents.day! >= 21) || (birthDateComponents.month == 2 && birthDateComponents.day! <= 18) {

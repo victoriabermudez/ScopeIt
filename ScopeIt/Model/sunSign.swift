@@ -15,20 +15,17 @@ class Sign : ObservableObject {
     @Published var signName : String
     @Published var signDescription : String
     @Published var signCompatibility : [String : Bool]
-    
-    init(signName : String){
+    @Published var backgroundColor : String
+
+    init(signName : String, backgroundColor : String){
         self.signName = signName
         self.signDescription = ""
         self.signCompatibility = [:]
+        self.backgroundColor = backgroundColor
 
     }
     
-    init(signName : String, signDescription : String, signCompatibility : [String : Bool]){
-        self.signName = signName
-        self.signDescription = signDescription
-        self.signCompatibility = signCompatibility
-        
-    }
+    
 
 }
 
