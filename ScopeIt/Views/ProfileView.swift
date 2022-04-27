@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     
     @EnvironmentObject var userInfo : UserInfo
+    @EnvironmentObject var fetchDataHoroscope : FetchDataHoroscope
     //@State private var birthDate = Date()
     
     
@@ -38,19 +39,21 @@ struct ProfileView: View {
                     .font(.title3)
                 DatePicker(selection: $userInfo.birthdate, in: ...Date(), displayedComponents: .date) {
                     
+                }.onDisappear {
+                    fetchDataHoroscope.decode(url : URL(string: "https://ohmanda.com/api/horoscope/" + "\(userInfo.sign.signName.lowercased())")!)
                 }
                 
             }.padding()
                 .padding(.top, 10)
                 .padding(.bottom, 100)
             
-            TextField("location", text: $userInfo.location).disableAutocorrection(true).autocapitalization(.none)
-
-                                .padding()
-
-                                .padding(.top, 10)
-
-                                .padding(.bottom, 100)
+//            TextField("location", text: $userInfo.location).disableAutocorrection(true).autocapitalization(.none)
+//
+//                                .padding()
+//
+//                                .padding(.top, 10)
+//
+//                                .padding(.bottom, 100)
             
             
             //            HStack {

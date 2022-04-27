@@ -24,12 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 struct ScopeItApp : App {
     
     @StateObject var userInfo = UserInfo()
+    @StateObject var fetchDataHoroscope = FetchDataHoroscope()
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(userInfo)
+                .environmentObject(fetchDataHoroscope)
         }
     }
 }

@@ -10,20 +10,16 @@ import Foundation
 class FetchDataHoroscope : ObservableObject{
     
     @Published var responsesHoroscope : ResponseHoroscope = ResponseHoroscope()
-    @Published var url : URL
     
-    init(url : URL){
+    init(){
         
-        self.url = url
-        
-//        else {
-//            
-//            print("no data")
-//            
-//            return
-//            
-//        }
-        
+        guard let url = URL(string: "https://www.affirmations.dev") else {
+
+            print("no data")
+
+            return}
+    }
+    func decode(url : URL){
         
         URLSession.shared.dataTask(with: url) { (data, response, errors) in
             
@@ -47,12 +43,12 @@ class FetchDataHoroscope : ObservableObject{
                     
                 }
                 
-                print(self.url)
+                print(url)
             }
             
             else{
                 
-                print(self.url)
+                print(url)
                 print("Can't decode JSON")
                 print("----------------------------------------------------------------------------------------------------------------")
                 
