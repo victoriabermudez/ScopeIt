@@ -26,7 +26,7 @@ class UserInfo: ObservableObject{
     @Published var location: String
     @Published var loggedin: Bool = false
     @Published var createAcct: Bool = false
-    @Published var accountInfo: Bool = false
+    //@Published var accountInfo: Bool = false
     
     var sign: Sign {
         
