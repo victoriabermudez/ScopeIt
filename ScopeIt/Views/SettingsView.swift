@@ -22,7 +22,9 @@ struct SettingsView: View {
 
     @EnvironmentObject var userInfo: UserInfo
 
-    @StateObject var fetchDataHoroscope = FetchDataHoroscope()
+    var fetchDataHoroscope : FetchDataHoroscope {
+        FetchDataHoroscope(url : URL(string: "https://ohmanda.com/api/horoscope/" + "\(userInfo.sign.signName.lowercased())")!)
+    }
 
     @State var resHoroscope = ResponseHoroscope()
 
@@ -34,7 +36,7 @@ struct SettingsView: View {
 
     //@StateObject var fetchDataAPOD = FetchDataAPOD()
 
-    @StateObject var fetchDataWeather = FetchDataWeather()
+    //@StateObject var fetchDataWeather = FetchDataWeather()
 
     
 
@@ -66,29 +68,29 @@ struct SettingsView: View {
 
             })
 
-            Toggle (isOn: $userInfo.displaySunrise, label: {
-
-                Text("Sunrise")
-
-            })
-
-            Toggle (isOn: $userInfo.displaySunset, label: {
-
-                Text("Sunset")
-
-            })
-
-            Toggle (isOn: $userInfo.displayMoonrise, label: {
-
-                Text("Moonrise")
-
-            })
-
-            Toggle (isOn: $userInfo.displayMoonset, label: {
-
-                Text("Moonset")
-
-            })
+//            Toggle (isOn: $userInfo.displaySunrise, label: {
+//
+//                Text("Sunrise")
+//
+//            })
+//
+//            Toggle (isOn: $userInfo.displaySunset, label: {
+//
+//                Text("Sunset")
+//
+//            })
+//
+//            Toggle (isOn: $userInfo.displayMoonrise, label: {
+//
+//                Text("Moonrise")
+//
+//            })
+//
+//            Toggle (isOn: $userInfo.displayMoonset, label: {
+//
+//                Text("Moonset")
+//
+//            })
 
             //TextField("Location", text: "\($userInfo.location)").disableAutocorrection(true).autocapitalization(.none)
 

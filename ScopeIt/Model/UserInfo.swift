@@ -8,6 +8,7 @@
 import SwiftUI
 
 class UserInfo: ObservableObject{
+    
     @Published var email: String
     @Published var firstName: String
     @Published var lastName: String
@@ -133,7 +134,7 @@ class UserInfo: ObservableObject{
 
          // self.cardAmount = 3
 
-          self.location = ""
+          self.location = "London"
 
       }
     

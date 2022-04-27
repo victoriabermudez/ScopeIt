@@ -25,7 +25,7 @@ struct HomeView: View {
                     }
                 SettingsView()
                     .tabItem{
-                        Label("Settings", systemImage: "gear.circle.fill")
+                        Label("Settings", systemImage: "gearshape.circle.fill")
                     }
                 ProfileView()
                     .tabItem{
