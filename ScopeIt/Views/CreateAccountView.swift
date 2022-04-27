@@ -21,7 +21,9 @@ struct CreateAccountView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack{
                 Spacer()
-                
+                Image("ScopeItLogo")
+                    .resizable()
+                    .scaledToFit()
                 HStack {
                     Image(systemName: "mail")
                     TextField("email address", text: $userInfo.email).disableAutocorrection(true).autocapitalization(.none).keyboardType(.emailAddress)
@@ -75,8 +77,9 @@ struct CreateAccountView: View {
                     
                 }.padding()
                     .font(.system(size: 15))
+               // .font(Font.custom)
                     .frame(width: UIScreen.main.bounds.width - 200)
-                    .foregroundColor(.black)
+                .foregroundColor(Color.lilac2)
                     .padding(.top, 10)
                 
                 Spacer()
