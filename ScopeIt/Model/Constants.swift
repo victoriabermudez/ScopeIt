@@ -11,4 +11,5 @@ extension Color{
     static let lilac = Color("lilac")
     static let lilac2 = Color("lilac2")
     static let teal = Color("teal")
+   // static let userInfo.sign.textColor = Color("textColor")
 }
