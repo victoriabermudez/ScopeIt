@@ -12,6 +12,7 @@ import SwiftUI
 struct SunSignView: View {
     
     @EnvironmentObject var userInfo: UserInfo
+    @State var backgroundColor : Color = Color."\(userInfo.sign.signName)"+"Accent"
     
     var body: some View {
         
@@ -29,10 +30,13 @@ struct SunSignView: View {
                     .padding(.top, 50)
             
             Text("Description" + "\(userInfo.sign.signDescription)")
-                .foregroundColor(Color.userInfo.sign.textColor)
                 .bold()
+                .background(Color."\(userInfo.sign.signName)"+"Accent")
+                if userInfo.sign.signName = "Aquarius" {
+                    .background(Color.AquariusAccent)
+                    .foregroundColor(Color.AquariusText)
+                }
             Text("Compatibility" + userInfo.sign.signCompatibility)
-                .foregroundColor(Color.userInfo.sign.textColor)
                 .bold()
             Text("Lucky Numbers" + userInfo.sign.luckyNumbers)
                 .foregroundColor(Color.userInfo.sign.textColor)
