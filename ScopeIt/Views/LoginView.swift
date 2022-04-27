@@ -19,7 +19,7 @@ struct LoginView: View {
                 .foregroundColor(Color.lilac)
                 .edgesIgnoringSafeArea(.all)
             VStack{
-                Image(“ScopeItLogo”)
+                Image("ScopeItLogo")
                     .resizable()
                     .scaledToFit()
                 HStack {

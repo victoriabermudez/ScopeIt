@@ -60,8 +60,7 @@ struct DailyView: View {
                     
                     Text("Horoscope")
                     
-                    Text(fetchDataHoroscope.responsesHoroscope.horoscope ?? "no ")
-                    Text(fetchDataHoroscope.responsesHoroscope.sign ?? "no sign")
+                    Text(fetchDataHoroscope.responsesHoroscope.horoscope ?? "Please enter your birthday in the Account tab to view today's horoscope")
                     
                 }
             }
