@@ -54,20 +54,20 @@ struct CreateAccountView: View {
                         FirebaseFunctions.login(email: userInfo.email, password: userInfo.password){success in}
                     }
                     
-                }.alert(isPresented: $showInsufficientPasswordAlert){
+                }.padding()
+                    .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
+                    .background(Color.teal)
+                    .foregroundColor(.lilac2)
+                    .cornerRadius(10)
+                    .padding()
+                    .cornerRadius(30)
+                .alert(isPresented: $showInsufficientPasswordAlert){
                     Alert(
                         title: Text("Insufficient Password"),
                         message: Text("The password must be 6 characters long or more"),
                         dismissButton: .default(Text("Try again"))
                     )
-                }}.padding()
-                .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
-                .background(Color.teal)
-                .foregroundColor(.lilac2)
-                .cornerRadius(10)
-                .padding()
-                .cornerRadius(30)
-            
+                }}
                 .sheet(isPresented: $creatingAccount, onDismiss: {
                     HomeView()
                     userInfo.loggedin = true
