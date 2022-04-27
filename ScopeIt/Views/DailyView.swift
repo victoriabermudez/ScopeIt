@@ -18,12 +18,7 @@ struct DailyView: View {
     @EnvironmentObject var fetchDataHoroscope: FetchDataHoroscope
     
     
-//    var fetchDataHoroscope : FetchDataHoroscope {
-//        FetchDataHoroscope(url : URL(string: "https://ohmanda.com/api/horoscope/" + "\(userInfo.sign.signName.lowercased())")!)
-//    }
-    
-//    @StateObject var fetchDataHoroscope : FetchDataHoroscope = FetchDataHoroscope()
-    
+
     @State var resHoroscope = ResponseHoroscope()
     
     

@@ -49,27 +49,6 @@ class Sign : ObservableObject {
         self.signDislikes = signDislikes
     }
     
-//    init(signName : String, signDescription : String, signCompatibility : String, luckyNumbers : String, signColor : String, signStrength : String, signWeakness : String, signLikes : String, signDislikes : String){
-//
-//        self.signName = signName
-//
-//        self.signDescription = signDescription
-//
-//        self.signCompatibility = signCompatibility
-//
-//        self.luckyNumbers = luckyNumbers
-//
-//        self.signColor = signColor
-//
-//        self.signStrength = signStrength
-//
-//        self.signWeakness = signWeakness
-//
-//        self.signLikes = signLikes
-//
-//        self.signDislikes = signDislikes
-//
-//    }
 
 }
 

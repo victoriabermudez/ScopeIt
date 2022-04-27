@@ -90,7 +90,6 @@ struct ProfileView: View {
                 
                 userInfo.loggedin = false
                 userInfo.createAcct = false
-                userInfo.accountInfo = false
                 
                 
                 
