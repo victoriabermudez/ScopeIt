@@ -19,7 +19,9 @@ struct LoginView: View {
                 .foregroundColor(Color.lilac)
                 .edgesIgnoringSafeArea(.all)
             VStack{
-                
+                Image(“ScopeItLogo”)
+                    .resizable()
+                    .scaledToFit()
                 HStack {
                     Image(systemName: "mail")
                     TextField("email address", text: $userInfo.email).disableAutocorrection(true).autocapitalization(.none).keyboardType(.emailAddress)
@@ -45,7 +47,7 @@ struct LoginView: View {
                             Spacer()
                             HStack{
                                 Image(systemName: "mail")
-                                    .foregroundColor(.black)
+                                    .foregroundColor(Color.lilac2)
                                 TextField("email address", text: $userInfo.email).disableAutocorrection(true).autocapitalization(.none).keyboardType(.emailAddress)
                             }
                             .padding()
@@ -58,8 +60,8 @@ struct LoginView: View {
                             }
                             .padding()
                             .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
-                            .background(Color.black)
-                            .foregroundColor(.white)
+                            .background(Color.lilac2)
+                            .foregroundColor(Color.teal)
                             .cornerRadius(10)
                             .padding(.top, 05)
                             .padding(.bottom, 10)
@@ -69,7 +71,7 @@ struct LoginView: View {
                     }
                 }).padding()
                     .font(.system(size: 15))
-                    .foregroundColor(.red)
+                    .foregroundColor(Color.teal)
                     .cornerRadius(10)
                 
                 HStack {
@@ -101,7 +103,7 @@ struct LoginView: View {
                 
                 .padding()
                     .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
-                    .background(Color.black)
+                    .background(Color.lilac2)
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .padding()
@@ -113,8 +115,8 @@ struct LoginView: View {
                     userInfo.createAcct = true
                 }.padding()
                     .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
-                    .background(Color.white)
-                    .foregroundColor(.black)
+                    .background(Color.teal)
+                    .foregroundColor(.lilac2)
                     .cornerRadius(10)
                     .padding()
                     .cornerRadius(30)
