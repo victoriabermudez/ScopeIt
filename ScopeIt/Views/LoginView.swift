@@ -39,7 +39,7 @@ struct LoginView: View {
                             Text("Forgot Password")
                                 .padding()
                                 .frame(width: UIScreen.main.bounds.width - 100)
-                                .foregroundColor(.black)
+                                .foregroundColor(Color.teal)
                                 .padding(.top, 50)
                                 .padding(.bottom, 10)
                             Spacer()
