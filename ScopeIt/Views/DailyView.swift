@@ -68,7 +68,7 @@ struct DailyView: View {
                 
                 VStack{
                     
-                    Text("Affirmation")
+                    Text("Affirmation ")
                     
                     Text(fetchDataAffirmation.responsesAffirmation.affirmation ?? "no affirmation")
                     

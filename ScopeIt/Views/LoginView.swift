@@ -75,8 +75,8 @@ struct LoginView: View {
                     .cornerRadius(10)
                 
                 HStack {
-                    Image(systemName: "lock")
-                    SecureField("password", text: $userInfo.password)
+                    Image(systemName: "lock").foregroundColor(Color.lilac2)
+                    SecureField("password", text: $userInfo.password).foregroundColor(Color.lilac2)
                 }
                 .padding()
                 .padding(.top, 20)
@@ -104,7 +104,7 @@ struct LoginView: View {
                 .padding()
                     .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
                     .background(Color.lilac2)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color.teal)
                     .cornerRadius(10)
                     .padding()
                     .cornerRadius(30)
