@@ -23,8 +23,8 @@ struct LoginView: View {
                     .resizable()
                     .scaledToFit()
                 HStack {
-                    Image(systemName: "mail")
-                    TextField("email address", text: $userInfo.email).disableAutocorrection(true).autocapitalization(.none).keyboardType(.emailAddress)
+                    Image(systemName: "mail").foregroundColor(Color.lilac2)
+                    TextField("email address", text: $userInfo.email).disableAutocorrection(true).autocapitalization(.none).keyboardType(.emailAddress).foregroundColor(Color.lilac2)
                 }
                 .padding()
                 

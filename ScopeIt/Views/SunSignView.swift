@@ -56,8 +56,6 @@ struct SunSignView: View {
             Text("Dislikes" + userInfo.sign.signDislikes)
 //                .foregroundColor(Color.userInfo.sign.textColor)
                 .bold()
-                
-                Spacer()
             }
         }
     }

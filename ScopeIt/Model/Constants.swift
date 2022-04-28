@@ -11,6 +11,7 @@ extension Color{
     static let lilac = Color("lilac")
     static let lilac2 = Color("lilac2")
     static let teal = Color("teal")
+    static let pink = Color("pink")
     //Aquarius
     static let AquariusAccent = Color("AquariusAccent")
     static let AquariusText = Color("AquariusText")
