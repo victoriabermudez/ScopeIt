@@ -43,61 +43,73 @@ struct SettingsView: View {
     
 
     var body: some View {
+        ZStack {
+            Rectangle()
+                .foregroundColor(Color.lilac)
+                .edgesIgnoringSafeArea(.all)
+            VStack{
 
-        VStack{
+                Toggle (isOn: $userInfo.displayHoroscope, label: {
+                    Image(systemName: "moon.stars.fill")
+                    Text("Horoscope")
 
-            Toggle (isOn: $userInfo.displayHoroscope, label: {
+                })
+                .padding()
+                .toggleStyle(SwitchToggleStyle(tint: Color.teal))
 
-                Text("Horoscope")
+                Toggle (isOn: $userInfo.displayAffirmation, label: {
+                    Image(systemName: "heart.fill")
+                    Text("Affirmation")
 
-            })
+                })
+                .padding()
+                .toggleStyle(SwitchToggleStyle(tint: Color.teal))
 
-            Toggle (isOn: $userInfo.displayAffirmation, label: {
+                Toggle (isOn: $userInfo.displayAdvice, label: {
+                    Image(systemName: "mail.fill")
+                    Text("Advice")
 
-                Text("Affirmation")
+                })
+                .padding()
+                .toggleStyle(SwitchToggleStyle(tint: Color.teal))
 
-            })
+                Toggle (isOn: $userInfo.displayTarot, label: {
+                    Image(systemName: "greetingcard.fill")
+                    Text("Tarot")
 
-            Toggle (isOn: $userInfo.displayAdvice, label: {
+                })
+                .padding()
+                .toggleStyle(SwitchToggleStyle(tint: Color.teal))
 
-                Text("Advice")
+    //            Toggle (isOn: $userInfo.displaySunrise, label: {
+    //
+    //                Text("Sunrise")
+    //
+    //            })
+    //
+    //            Toggle (isOn: $userInfo.displaySunset, label: {
+    //
+    //                Text("Sunset")
+    //
+    //            })
+    //
+    //            Toggle (isOn: $userInfo.displayMoonrise, label: {
+    //
+    //                Text("Moonrise")
+    //
+    //            })
+    //
+    //            Toggle (isOn: $userInfo.displayMoonset, label: {
+    //
+    //                Text("Moonset")
+    //
+    //            })
 
-            })
+                //TextField("Location", text: "\($userInfo.location)").disableAutocorrection(true).autocapitalization(.none)
 
-            Toggle (isOn: $userInfo.displayTarot, label: {
+                //  TextField("Tarot Card Amount", text: "\($userInfo.cardAmount)").disableAutocorrection(true).autocapitalization(.none)
 
-                Text("Tarot")
-
-            })
-
-//            Toggle (isOn: $userInfo.displaySunrise, label: {
-//
-//                Text("Sunrise")
-//
-//            })
-//
-//            Toggle (isOn: $userInfo.displaySunset, label: {
-//
-//                Text("Sunset")
-//
-//            })
-//
-//            Toggle (isOn: $userInfo.displayMoonrise, label: {
-//
-//                Text("Moonrise")
-//
-//            })
-//
-//            Toggle (isOn: $userInfo.displayMoonset, label: {
-//
-//                Text("Moonset")
-//
-//            })
-
-            //TextField("Location", text: "\($userInfo.location)").disableAutocorrection(true).autocapitalization(.none)
-
-            //  TextField("Tarot Card Amount", text: "\($userInfo.cardAmount)").disableAutocorrection(true).autocapitalization(.none)
-
+            }
         }
 
     }
