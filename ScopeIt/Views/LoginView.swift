@@ -116,7 +116,7 @@ struct LoginView: View {
                 }.padding()
                     .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
                     .background(Color.teal)
-                    .foregroundColor(.lilac2)
+                    .foregroundColor(Color.lilac2)
                     .cornerRadius(10)
                     .padding()
                     .cornerRadius(30)
