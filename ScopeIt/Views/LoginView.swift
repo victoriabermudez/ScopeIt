@@ -14,17 +14,19 @@ struct LoginView: View {
     @State private var showIncorrectPasswordAlert = false
     
     var body: some View {
-
+        
         ZStack{
-            
+            //Sets the background color to lilac
             Rectangle()
                 .foregroundColor(Color.lilac)
                 .edgesIgnoringSafeArea(.all)
             VStack{
+                //Displays the logo at the top of the Vstack
                 Image("ScopeItLogo")
                     .resizable()
                     .scaledToFit()
                 HStack {
+                    //Displays the mail
                     Image(systemName: "mail")
                         .foregroundColor(Color.lilac2)
                     TextField("email address", text: $userInfo.email).disableAutocorrection(true).autocapitalization(.none).keyboardType(.emailAddress).foregroundColor(Color.lilac2)
@@ -75,7 +77,7 @@ struct LoginView: View {
                     }
                 }).padding()
                     .font(.system(size: 15))
-                .foregroundColor(Color.teal)
+                    .foregroundColor(Color.teal)
                     .cornerRadius(10)
                 
                 HStack {
@@ -102,17 +104,17 @@ struct LoginView: View {
                         title: Text("Incorrect Credentials"),
                         message: Text("Try again or click Forgot Password"),
                         dismissButton: .default(Text("Back to Login"))
-                        )
+                    )
                 }
                 
                 .padding()
-                    .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
-                    .background(Color.lilac2)
+                .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
+                .background(Color.lilac2)
                 .foregroundColor(Color.teal)
-                    .cornerRadius(10)
-                    .padding()
-                    .cornerRadius(30)
-                    .padding()
+                .cornerRadius(10)
+                .padding()
+                .cornerRadius(30)
+                .padding()
                 
                 
                 Button("Create An Account") {
@@ -120,7 +122,7 @@ struct LoginView: View {
                 }.padding()
                     .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
                     .background(Color.lilac2)
-                .foregroundColor(Color.teal)
+                    .foregroundColor(Color.teal)
                     .cornerRadius(10)
                     .padding()
                     .cornerRadius(30)

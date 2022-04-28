@@ -27,6 +27,7 @@ struct DailyView: View {
                 .foregroundColor(Color.lilac2)
                 .edgesIgnoringSafeArea(.all)
             VStack{
+                Image(systemName: "moon.stars.fill").foregroundColor(Color.teal)
                 Text("Daily")
                     .font(.title)
                     .foregroundColor(Color.teal)
@@ -39,7 +40,7 @@ struct DailyView: View {
                             .font(.title2)
                             .foregroundColor(Color.teal)
                             .bold()
-                        Text(fetchDataHoroscope.responsesHoroscope.horoscope ?? "go to account tab  to enter your birthdate")
+                        Text(fetchDataHoroscope.responsesHoroscope.horoscope ?? "go to account tab to enter your birthdate")
                             .padding(.horizontal)
                             .foregroundColor(Color.teal)
                             .multilineTextAlignment(.center)
@@ -88,7 +89,7 @@ struct DailyView: View {
                     
                     VStack{
                         
-                        Text("Tarot cards")
+                        Text("Tarot Cards")
                             .font(.title2)
                             .foregroundColor(Color.teal)
                             .bold()

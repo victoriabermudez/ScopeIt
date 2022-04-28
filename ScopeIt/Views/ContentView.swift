@@ -6,26 +6,23 @@
 //
 
 import SwiftUI
-
+//This class shows the LoginView where you enter a username/password to create an account.
 struct ContentView: View {
     
     @EnvironmentObject var userInfo: UserInfo
     
     var body: some View {
-                Group{
-                    if userInfo.createAcct{
-                        CreateAccountView()
-                    }
-//                    else if userInfo.accountInfo{
-//                        AccountInfoView()
-//                    }
-                    else if !userInfo.loggedin{
-                        LoginView()
-                    } else {
-                        HomeView()
-                    }
-               }
-
+        Group{
+            if userInfo.createAcct{
+                CreateAccountView()
+            }
+            else if !userInfo.loggedin{
+                LoginView()
+            } else {
+                HomeView()
+            }
+        }
+        
     }
 }
 
