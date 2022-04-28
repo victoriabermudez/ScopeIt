@@ -12,50 +12,106 @@ import SwiftUI
 struct SunSignView: View {
     
     @EnvironmentObject var userInfo: UserInfo
-    //@State var backgroundColor : Color = Color."\(userInfo.sign.signName)"+"Accent"
     
     var body: some View {
         
         ZStack{
+            GeometryReader{ geo in
+                            Image(userInfo.sign.backgroundImage)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: geo.size.width, height: geo.size.height, alignment: .center)}
             
-            Image("\(userInfo.sign.backgroundImage)")
+            GeometryReader{ geo in
+                            Image(userInfo.sign.backgroundImage)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: geo.size.width, height: geo.size.height+100, alignment: .center)}
+
+
             
             VStack{
-                Text(userInfo.sign.signName)
-                    .padding()
-                    .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
-//                    .background(Color.userInfo.sign.backgroundColor)
-//                    .foregroundColor(Color.userInfo.sign.textColor)
-                    .cornerRadius(10)
-                    .padding(.top, 50)
+
+                VStack{
+                
+
+//                Text(userInfo.sign.signName)
+//                    .padding()
+//                    .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
+//                    .background(Color.lilac)
+//                    .foregroundColor(.white)
+//                    .cornerRadius(10)
+//                    .padding(.top, 50)
             
-            Text("Description" + "\(userInfo.sign.signDescription)")
+            Text("Description")
+                .font(.title2)
+                .foregroundColor(Color.pink)
                 .bold()
-//                .background(Color."\(userInfo.sign.signName)"+"Accent")
-//                if userInfo.sign.signName = "Aquarius" {
-//                    .background(Color.AquariusAccent)
-//                    .foregroundColor(Color.AquariusText)
-//                }
-            Text("Compatibility" + userInfo.sign.signCompatibility)
+                .padding(.top)
+            Text("\(userInfo.sign.signDescription)")
+                .padding(.horizontal)
+                .foregroundColor(Color.pink)
+                .multilineTextAlignment(.center)
+            Text("Compatibility")
+                .font(.title2)
+                .foregroundColor(Color.pink)
                 .bold()
-            Text("Lucky Numbers" + userInfo.sign.luckyNumbers)
-//                .foregroundColor(Color.userInfo.sign.textColor)
+            Text("\(userInfo.sign.signCompatibility)")
+                .padding(.horizontal)
+                .foregroundColor(Color.pink)              .multilineTextAlignment(.center)
+
+            Text("Lucky Numbers")
+                .font(.title2)
+                .foregroundColor(Color.pink)
                 .bold()
-            Text("Colors" + userInfo.sign.signColor)
-//                .foregroundColor(Color.userInfo.sign.textColor)
+            Text("\(userInfo.sign.luckyNumbers)")
+                .padding(.horizontal)
+                .foregroundColor(Color.pink)                .multilineTextAlignment(.center)
+
+            Text("Colors")
+                .font(.title2)
+                .foregroundColor(Color.pink)
                 .bold()
-            Text("Strengths" + userInfo.sign.signStrength)
-//                .foregroundColor(Color.userInfo.sign.textColor)
+            Text("\(userInfo.sign.signColor)")
+                .padding(.horizontal)
+                .foregroundColor(Color.pink)               .multilineTextAlignment(.center)
+
+            Text("Strengths")
+                .font(.title2)
+                .foregroundColor(Color.pink)
                 .bold()
-            Text("Weaknesses" + userInfo.sign.signWeakness)
-//                .foregroundColor(Color.userInfo.sign.textColor)
+
+            }
+            VStack{
+                Text("\(userInfo.sign.signStrength)")
+                    .padding(.horizontal)
+                    .foregroundColor(Color.pink)              .multilineTextAlignment(.center)
+
+                Text("Weaknesses")
+                .font(.title2).foregroundColor(Color.pink)
+                    .bold()
+            Text("\(userInfo.sign.signWeakness)")
+                .padding(.horizontal)
+                .foregroundColor(Color.pink)                .multilineTextAlignment(.center)
+            Text("Likes")
+                .font(.title2).foregroundColor(Color.pink)
                 .bold()
-            Text("Likes" + userInfo.sign.signLikes)
-//                .foregroundColor(Color.userInfo.sign.textColor)
+            Text("\(userInfo.sign.signLikes)")
+                .padding(.horizontal)
+                .foregroundColor(Color.pink)
+                .multilineTextAlignment(.center)
+            Text("Dislikes")
+                .font(.title2).foregroundColor(Color.pink)
                 .bold()
-            Text("Dislikes" + userInfo.sign.signDislikes)
-//                .foregroundColor(Color.userInfo.sign.textColor)
-                .bold()
+            Text("\(userInfo.sign.signDislikes)")
+                .padding(.horizontal)
+                .padding(.bottom)
+                .foregroundColor(Color.pink)
+                .multilineTextAlignment(.center)
+
+            
+            }
+        }
             }
         }
     }
@@ -65,4 +121,4 @@ struct SunSignView: View {
             SunSignView()
         }
     }
-}
+

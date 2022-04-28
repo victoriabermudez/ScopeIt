@@ -17,26 +17,32 @@ struct ProfileView: View {
     
     var body: some View {
         
+        ZStack{
+            Rectangle()
+                .foregroundColor(Color.lilac2)
+                .edgesIgnoringSafeArea(.all)
         VStack{
+
+            
             HStack {
-                Image(systemName: "person.circle.fill")
+                Image(systemName: "person.circle.fill").foregroundColor(Color.teal)
                 Text("Name")
-                    .font(.title3)
+                    .font(.title3).foregroundColor(Color.teal)
                 Spacer()
-                TextField("first name", text: $userInfo.firstName).disableAutocorrection(true).autocapitalization(.none)
+                TextField("first name", text: $userInfo.firstName).disableAutocorrection(true).autocapitalization(.none).foregroundColor(Color.teal)
                 Spacer()
-                TextField("last name", text: $userInfo.lastName).disableAutocorrection(true).autocapitalization(.none)
+                TextField("last name", text: $userInfo.lastName).disableAutocorrection(true).autocapitalization(.none).foregroundColor(Color.teal)
             }.padding()
-                .padding(.top, 50)
+                .padding(.top, 75)
                 .padding(.bottom, 10)
             
             
             
             HStack {
-                Image(systemName: "calendar.circle.fill")
+                Image(systemName: "calendar.circle.fill").foregroundColor(Color.teal)
                 
                 Text("Birthdate")
-                    .font(.title3)
+                    .font(.title3).foregroundColor(Color.teal)
                 DatePicker(selection: $userInfo.birthdate, in: ...Date(), displayedComponents: .date) {
                     
                 }.onDisappear {
@@ -46,7 +52,7 @@ struct ProfileView: View {
             }.padding()
                 .padding(.top, 10)
                 .padding(.bottom, 100)
-            
+            .foregroundColor(Color.teal)
 //            TextField("location", text: $userInfo.location).disableAutocorrection(true).autocapitalization(.none)
 //
 //                                .padding()
@@ -75,8 +81,6 @@ struct ProfileView: View {
             //                .padding(.bottom, 100)
             
             HStack{
-                Text("Your sign: ")
-                
                 Text(userInfo.sign.signName)
                     .padding()
                     .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
@@ -90,15 +94,18 @@ struct ProfileView: View {
                 
                 userInfo.loggedin = false
                 userInfo.createAcct = false
+//                userInfo.accountInfo = false
                 
                 
                 
             }.padding()
                 .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
-                .background(Color.red)
+                .background(Color.pink)
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 .padding(.top, 50)
+        }
+            
         }
     }
 }

@@ -3,7 +3,7 @@
 //  ScopeIt
 //
 //  Created by Michelle Kelly (student LM) on 2/24/22.
-// 
+//
 
 import SwiftUI
 
@@ -14,7 +14,9 @@ struct LoginView: View {
     @State private var showIncorrectPasswordAlert = false
     
     var body: some View {
+
         ZStack{
+            
             Rectangle()
                 .foregroundColor(Color.lilac)
                 .edgesIgnoringSafeArea(.all)
@@ -23,8 +25,10 @@ struct LoginView: View {
                     .resizable()
                     .scaledToFit()
                 HStack {
-                    Image(systemName: "mail").foregroundColor(Color.lilac2)
+                    Image(systemName: "mail")
+                        .foregroundColor(Color.lilac2)
                     TextField("email address", text: $userInfo.email).disableAutocorrection(true).autocapitalization(.none).keyboardType(.emailAddress).foregroundColor(Color.lilac2)
+                    
                 }
                 .padding()
                 
@@ -41,7 +45,7 @@ struct LoginView: View {
                             Text("Forgot Password")
                                 .padding()
                                 .frame(width: UIScreen.main.bounds.width - 100)
-                                .foregroundColor(Color.teal)
+                                .foregroundColor(Color.lilac2)
                                 .padding(.top, 50)
                                 .padding(.bottom, 10)
                             Spacer()
@@ -71,7 +75,7 @@ struct LoginView: View {
                     }
                 }).padding()
                     .font(.system(size: 15))
-                    .foregroundColor(Color.teal)
+                .foregroundColor(Color.teal)
                     .cornerRadius(10)
                 
                 HStack {
@@ -104,7 +108,7 @@ struct LoginView: View {
                 .padding()
                     .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
                     .background(Color.lilac2)
-                    .foregroundColor(Color.teal)
+                .foregroundColor(Color.teal)
                     .cornerRadius(10)
                     .padding()
                     .cornerRadius(30)
@@ -115,8 +119,8 @@ struct LoginView: View {
                     userInfo.createAcct = true
                 }.padding()
                     .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
-                    .background(Color.teal)
-                    .foregroundColor(Color.lilac2)
+                    .background(Color.lilac2)
+                .foregroundColor(Color.teal)
                     .cornerRadius(10)
                     .padding()
                     .cornerRadius(30)

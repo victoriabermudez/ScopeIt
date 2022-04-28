@@ -16,154 +16,101 @@ struct DailyView: View {
     
     @EnvironmentObject var userInfo: UserInfo
     @EnvironmentObject var fetchDataHoroscope: FetchDataHoroscope
-    
-    
-
     @State var resHoroscope = ResponseHoroscope()
-    
-    
-    
     @StateObject var fetchDataAffirmation = FetchDataAffirmation()
-    
-    
-    
     @StateObject var fetchDataAdvice = FetchDataAdvice()
-    
-    
-    
     @StateObject var fetchDataTarot = FetchDataTarot()
     
-    //@StateObject var fetchDataAPOD = FetchDataAPOD()
-    
-    //@StateObject var fetchDataWeather = FetchDataWeather()
-    
-    
-    
     var body: some View {
-        
-        
-        
-        VStack{
-            
-            //horoscope
-            
-            
-            
-            if(userInfo.displayHoroscope){
-                
-                VStack{
-                    
-                    Text("Horoscope")
-                    
-                    Text(fetchDataHoroscope.responsesHoroscope.horoscope ?? "Please enter your birthday in the Account tab to view today's horoscope")
-                    
+        ZStack{
+            Rectangle()
+                .foregroundColor(Color.lilac2)
+                .edgesIgnoringSafeArea(.all)
+            VStack{
+                Text("Daily")
+                    .font(.title)
+                    .foregroundColor(Color.teal)
+                    .bold()
+                    .padding(.bottom)
+                //horoscope
+                if(userInfo.displayHoroscope){
+                    VStack{
+                        Text("Horoscope")
+                            .font(.title2)
+                            .foregroundColor(Color.teal)
+                            .bold()
+                        Text(fetchDataHoroscope.responsesHoroscope.horoscope ?? "go to account tab  to enter your birthdate")
+                            .padding(.horizontal)
+                            .foregroundColor(Color.teal)
+                            .multilineTextAlignment(.center)
+                            .font(.system(size: 13.0))
+                    }
                 }
-            }
-            
-            
-            
-            //affirmation
-            
-            if(userInfo.displayAffirmation){
-                
-                VStack{
-                    
-                    Text("Affirmation ")
-                    
-                    Text(fetchDataAffirmation.responsesAffirmation.affirmation ?? "no affirmation")
-                    
-                }
-                
-            }
-            
-            //advice
-            
-            if(userInfo.displayAdvice){
-                
-                VStack{
-                    
-                    Text("Advice")
-                    
-                    Text(fetchDataAdvice.responsesAdvice.slip.advice ?? "no advice")
-                    
-                }
-                
-            }
-            
-            //tarot cards
-            
-            if(userInfo.displayTarot){
-                
-                VStack{
-                    
-                    Text("Tarot cards")
-                    
-                    ForEach(fetchDataTarot.responsesTarot.cards) { card in
+                //affirmation
+                if(userInfo.displayAffirmation){
+                    VStack{
                         
-                        Text(card.name!)
-                        
-                        Text(card.meaning_up!)
-                        
+                        Text("Affirmation")
+                            .font(.title2)
+                            .foregroundColor(Color.teal)
+                            .bold()
+                        Text(fetchDataAffirmation.responsesAffirmation.affirmation ?? "no affirmation today :(")
+                            .padding(.horizontal)
+                            .foregroundColor(Color.teal)
+                            .multilineTextAlignment(.center)
+                            .font(.system(size: 13.0))
                     }
                     
                 }
                 
+                //advice
                 
+                if(userInfo.displayAdvice){
+                    
+                    VStack{
+                        
+                        Text("Advice")
+                            .font(.title2)
+                            .foregroundColor(Color.teal)
+                            .bold()
+                        Text(fetchDataAdvice.responsesAdvice.slip.advice ?? "no advice today :(")
+                            .padding(.horizontal)
+                            .foregroundColor(Color.teal)
+                            .multilineTextAlignment(.center)
+                            .font(.system(size: 13.0))
+                    }
+                    
+                }
                 
+                //tarot cards
+                
+                if(userInfo.displayTarot){
+                    
+                    VStack{
+                        
+                        Text("Tarot cards")
+                            .font(.title2)
+                            .foregroundColor(Color.teal)
+                            .bold()
+                        ForEach(fetchDataTarot.responsesTarot.cards) { card in
+                            
+                            Text(card.name! + ":")
+                                .padding(.horizontal)
+                                .foregroundColor(Color.teal)
+                            Text(card.meaning_up!)
+                                .padding(.horizontal)
+                                .foregroundColor(Color.teal)
+                                .multilineTextAlignment(.center)
+                                .font(.system(size: 13.0))
+                        }
+                        
+                    }
+                    
+                    
+                    
+                }
             }
-            
-            //astro
-            
-            //        if(userInfo.displaySunrise){
-            //
-            //            VStack{
-            //
-            //                Text("Sunrise")
-            //
-            //            Text(fetchDataWeather.responsesWeather.astronomy.astro.sunrise ?? "no astro data")
-            //
-            //            }}
-            //
-            //    if(userInfo.displaySunset){
-            //
-            //    VStack{
-            //
-            //    Text("Sunset")
-            //
-            //    Text(fetchDataWeather.responsesWeather.astronomy.astro.sunset ?? "no astro data")
-            //
-            //    }}
-            //
-            //if(userInfo.displayMoonrise){
-            //
-            //    VStack{
-            //
-            //        Text("Moonrise")
-            //
-            //        Text(fetchDataWeather.responsesWeather.astronomy.astro.moonrise ?? "no astro data")
-            //
-            //    }}
-            //
-            //if(userInfo.displayMoonset){
-            //
-            //    VStack{
-            //
-            //        Text("Moonset")
-            //
-            //        Text(fetchDataWeather.responsesWeather.astronomy.astro.moonset ?? "no astro data")
-            //
-            //    }}
-            //
-            ////Text(fetchDataWeather.responsesWeather.astronomy.astro.moonphase ?? "no astro data")
-            
-            
-            
-            
-            
-            
-            
         }
-        
     }
     
 }

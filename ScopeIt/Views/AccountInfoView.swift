@@ -61,8 +61,6 @@ struct AccountInfoView: View {
                     .font(.title)
                     .padding()
                     .padding(.top, 200)
-                    .foregroundColor(Color.teal)
-                    .background(Color.lilac2)
                 
                 HStack {
                     Image(systemName: "person.circle.fill")
@@ -79,8 +77,6 @@ struct AccountInfoView: View {
                     Image(systemName: "calendar.circle.fill")
                     
                     Text("Birthdate")
-                        .foregroundColor(Color.teal)
-                        .background(Color.lilac2)
                         .font(.title3)
                     DatePicker(selection: $userInfo.birthdate, in: ...Date(), displayedComponents: .date) {
                         
@@ -107,13 +103,14 @@ struct AccountInfoView: View {
                 
                     userInfo.loggedin = true
                     userInfo.createAcct = false
+//                    userInfo.accountInfo = false
                     
                     
                     
                 }.padding()
                     .frame(width: UIScreen.main.bounds.width - (UIScreen.main.bounds.width)/4)
-                    .background(Color.lilac2)
-                .foregroundColor(Color.teal)
+                    .background(Color.white)
+                    .foregroundColor(.black)
                     .cornerRadius(10)
                     .padding(.top, 50)
                 
